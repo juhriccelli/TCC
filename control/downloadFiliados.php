@@ -1,5 +1,5 @@
 <?php
-//Script para o download da base de dados do TSE.
+//Script para o download da relação de filiados do TSE.
 
 $estados = array("ac", "al", "ap", "am", "ba", "ce", "df", "es", "go", "ma", "mt", "ms", "mg", "pa", "pb",
 "pr", "pe", "pi", "rj", "rn", "rs", "ro", "rr", "sc", "sp", "se", "to");
@@ -9,7 +9,7 @@ $partidos = array("avante", "dc", "dem", "mdb", "novo", "patri", "pc_do_b", "pcb
 
 
 
-$destino = mkdir(__DIR__.'/temp', 0777, true);
+$destino = mkdir(__DIR__.'/tempFilFil', 0777, true);
 
 for ($contPart=0; $contPart <35; $contPart++) {
   for ($contEst=0; $contEst <27 ; $contEst++) {
@@ -17,7 +17,7 @@ for ($contPart=0; $contPart <35; $contPart++) {
     echo "$url <br />";
 
     $ch = curl_init($url);
-    $fp = fopen("temp/".$partidos[$contPart]."_".$estados[$contEst].".zip", "w");
+    $fp = fopen("tempFil/".$partidos[$contPart]."_".$estados[$contEst].".zip", "w");
 
     curl_setopt($ch, CURLOPT_FILE, $fp);
     curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -26,9 +26,9 @@ for ($contPart=0; $contPart <35; $contPart++) {
     fclose($fp);
 
     $z = new ZipArchive();
-    $extrair = $z->open("temp/".$partidos[$contPart]."_".$estados[$contEst].".zip");
+    $extrair = $z->open("tempFil/".$partidos[$contPart]."_".$estados[$contEst].".zip");
     if ($extrair === true) {
-        $z->extractTo('temp/');
+        $z->extractTo('tempFil/');
         $z->close();
     } else {
         echo 'Erro: '.$extrair;
