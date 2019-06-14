@@ -12,6 +12,7 @@
 
       //Criar a tabela FILIADOS
       $filiados = "CREATE TABLE filiados (
+        id INT(10) AUTO_INCREMENT PRIMARY KEY,
         data_extracao DATE,
         hora_extracao TIMESTAMP,
         numero_inscricao INT(13),
