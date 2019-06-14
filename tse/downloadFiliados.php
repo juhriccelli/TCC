@@ -9,10 +9,10 @@ $partidos = array("avante", "dc", "dem", "mdb", "novo", "patri", "pc_do_b", "pcb
 
 
 
-$destino = mkdir(__DIR__.'/tempFilFil', 0777, true);
+$destino = mkdir(__DIR__.'/tempFil', 0777, true);
 
-for ($contPart=0; $contPart <35; $contPart++) {
-  for ($contEst=0; $contEst <27 ; $contEst++) {
+for ($contPart=0; $contPart <1; $contPart++) {
+  for ($contEst=0; $contEst <1 ; $contEst++) {
     $url = "agencia.tse.jus.br/estatistica/sead/eleitorado/filiados/uf/filiados_".$partidos[$contPart]."_".$estados[$contEst].".zip";
     echo "$url <br />";
 
