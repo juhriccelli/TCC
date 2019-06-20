@@ -14,7 +14,7 @@
       $filiados = "CREATE TABLE filiados (
         id INT(10) AUTO_INCREMENT PRIMARY KEY,
         data_extracao DATE,
-        hora_extracao TIMESTAMP,
+        hora_extracao TIME,
         numero_inscricao INT(13),
         nome_filiado VARCHAR(200),
         sigla_partido VARCHAR(10),
@@ -37,7 +37,7 @@
         $conn->exec($filiados);
 
       } catch(PDOException $e) {
-      echo $e->getMessage();
+        echo $e->getMessage();
       }
 
   ?>

@@ -9,14 +9,14 @@ $anos = array("1994","1996", "1998","2000", "2002","2004", "2006",
 "2008", "2010","2012", "2014","2016", "2018");
 
 
-$destino = mkdir(__DIR__.'/tempElei', 0777, true);
+$destino = mkdir($_SERVER['DOCUMENT_ROOT']."/temp/eleicao", 0777, true);
 
 for ($contAno=0; $contAno <1; $contAno++) {
     $url = "agencia.tse.jus.br/estatistica/sead/odsele/votacao_candidato_munzona/votacao_candidato_munzona_".$anos[$contAno].".zip";
     echo "$url <br />";
 
     $ch = curl_init($url);
-    $fp = fopen("tempElei/votacao_candidato_munzona_".$anos[$contAno].".zip", "w");
+    $fp = fopen($_SERVER['DOCUMENT_ROOT']."/temp/eleicao/votacao_candidato_munzona_".$anos[$contAno].".zip", "w");
 
     curl_setopt($ch, CURLOPT_FILE, $fp);
     curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -25,9 +25,9 @@ for ($contAno=0; $contAno <1; $contAno++) {
     fclose($fp);
 
     $z = new ZipArchive();
-    $extrair = $z->open("tempElei/votacao_candidato_munzona_".$anos[$contAno].".zip");
+    $extrair = $z->open($_SERVER['DOCUMENT_ROOT']."/temp/eleicao/votacao_candidato_munzona_".$anos[$contAno].".zip");
     if ($extrair === true) {
-        $z->extractTo('tempElei/');
+        $z->extractTo($_SERVER['DOCUMENT_ROOT']."/temp/eleicao/");
         $z->close();
     } else {
         echo 'Erro: '.$extrair;

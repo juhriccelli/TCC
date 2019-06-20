@@ -10,34 +10,29 @@
 
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      //Criar a tabela FILIADOS
-      $filiados = "CREATE TABLE filiados (
-        id INT(10) AUTO_INCREMENT PRIMARY KEY,
-        data_extracao DATE,
-        hora_extracao TIMESTAMP,
-        numero_inscricao INT(13),
-        nome_filiado VARCHAR(200),
-        sigla_partido VARCHAR(10),
-        nome_partido VARCHAR(100),
-        uf VARCHAR(2),
-        codigo_municipio INT(10),
-        nome_municipio VARCHAR(200),
-        zona_eleitoral INT(4),
-        secao_eleitoral INT(4),
-        data_filiacao DATE,
-        situacao_registro VARCHAR(20),
-        tipo_registro VARCHAR(10),
-        data_processamento DATE,
-        data_desfiliacao DATE,
-        data_cancelamento DATE,
-        data_regularizacao DATE,
-        motivo_cancelamento VARCHAR(50));
-        ";
+      foreach (glob(getcwd() . $_SERVER['DOCUMENT_ROOT']."/temp/aplic/sead/lista_filiados/uf/*.csv") as $file) {
+        $pointer = fopen($file, 'r');
+        while (!feof($pointer)) {
+          if(!isset($linha) && $linha == NULL)
+          continue;
+          if ($conteudo = fgets($file)){
+		          @$ll++;
+		          $linha = explode(';', $conteudo);
+		      }
 
-        $conn->exec($filiados);
+          $sql = "INSERT INTO `filiados` (data_extracao, hora_extracao, numero_inscricao, nome_filiado, sigla_partido,
+            nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral, data_filiacao,
+            situacao_registro, tipo_registro, data_processamento, data_desfiliacao, data_cancelamento,
+            data_regularizacao, motivo_cancelamento)
+          VALUES ('$linha[0]','$linha[1]','$linha[2]','$linha[3]','$linha[4]','$linha[5]','$linha[6]','$linha[7]',
+            '$linha[8]','$linha[9]','$linha[10]','$linha[11]','$linha[12]','$linha[13]','$linha[14]','$linha[15]',
+            '$linha[16]','$linha[17]','$linha[18]','$linha[19]')";
+          $result = mysqli_query($con,$sql);
+          $linha = array();
+		      }
+        }
 
-      } catch(PDOException $e) {
+    } catch(PDOException $e) {
       echo $e->getMessage();
-      }
-
+    }
   ?>
