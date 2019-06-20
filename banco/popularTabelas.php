@@ -5,34 +5,28 @@
   $password = "admin";
   $database = "id9315071_tcc";
 
-  try {
-      $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+  $conexao = mysqli_connect($servername, $username, $password, $database);
 
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  //descobrir quantidade de arquivos na pasta
+  chdir($_SERVER['DOCUMENT_ROOT']."/temp/filiados/aplic/sead/lista_filiados/uf/");
+  $arquivos = glob("{*.csv,*.txt}", GLOB_BRACE);
+  //inserir linhas do csv no banco de dados
+  foreach($arquivos as $ext){
+    $arquivo = fopen ($ext, 'r');
+    while(!feof($arquivo)) {
+      $linha = fgets($arquivo, 1024);
+      $dados = explode(';', $linha);
+      if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
+        /*mysql_query('INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
+          sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
+          data_filiacao, situacao_registro, tipo_registro, data_processament, data_desfiliacao, data_cancelamento,
+          data_regularizacao, motivo_cancelamento)
+          VALUES ("'.$dados[0].'", "'.$dados[1].'")');*/
 
-      foreach (glob(getcwd() . $_SERVER['DOCUMENT_ROOT']."/temp/aplic/sead/lista_filiados/uf/*.csv") as $file) {
-        $pointer = fopen($file, 'r');
-        while (!feof($pointer)) {
-          if(!isset($linha) && $linha == NULL)
-          continue;
-          if ($conteudo = fgets($file)){
-		          @$ll++;
-		          $linha = explode(';', $conteudo);
-		      }
+          mysql_query($conexao, 'INSERT INTO filiados (data_extracao, hora_extracao) VALUES ("'.$dados[0].'", "'.$dados[1].'")');
 
-          $sql = "INSERT INTO `filiados` (data_extracao, hora_extracao, numero_inscricao, nome_filiado, sigla_partido,
-            nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral, data_filiacao,
-            situacao_registro, tipo_registro, data_processamento, data_desfiliacao, data_cancelamento,
-            data_regularizacao, motivo_cancelamento)
-          VALUES ('$linha[0]','$linha[1]','$linha[2]','$linha[3]','$linha[4]','$linha[5]','$linha[6]','$linha[7]',
-            '$linha[8]','$linha[9]','$linha[10]','$linha[11]','$linha[12]','$linha[13]','$linha[14]','$linha[15]',
-            '$linha[16]','$linha[17]','$linha[18]','$linha[19]')";
-          $result = mysqli_query($con,$sql);
-          $linha = array();
-		      }
         }
-
-    } catch(PDOException $e) {
-      echo $e->getMessage();
-    }
-  ?>
+      }
+    fclose($arquivo);
+  };
+?>
