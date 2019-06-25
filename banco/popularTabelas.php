@@ -25,7 +25,12 @@
       $dados[16] = implode("-",array_reverse(explode("/",$dados[16])));
       $dados[17] = implode("-",array_reverse(explode("/",$dados[17])));
 
-      var_dump ($dados[3]);
+      $dados[2] = (int) $dados[2];
+      $dados[7] = (int) $dados[7];
+      $dados[9] = (int) $dados[9];
+      $dados[10] = (int) $dados[10];
+        
+
 
       $sql = "INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
         sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
