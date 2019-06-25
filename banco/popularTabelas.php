@@ -27,15 +27,15 @@
 
       $dados[0] = (string) $dados[0];
       $dados[1] = (string) $dados[1];
-      $dados[2] = (int) $dados[2];
+      $dados[2] = intval ($dados[2]);
       $dados[3] = (string) $dados[3];
       $dados[4] = (string) $dados[4];
       $dados[5] = (string) $dados[5];
       $dados[6] = (string) $dados[6];
-      $dados[7] = (int) $dados[7];
+      $dados[7] = intval ($dados[7]);
       $dados[8] = (string) $dados[8];
-      $dados[9] = (int) $dados[9];
-      $dados[10] = (int) $dados[10];
+      $dados[9] = intval ($dados[9]);
+      $dados[10] = intval ($dados[10]);
       $dados[11] = (string) $dados[11];
       $dados[12] = (string) $dados[12];
       $dados[13] = (string) $dados[13];
@@ -45,12 +45,13 @@
       $dados[17] = (string) $dados[17];
       $dados[18] = (string) $dados[18];
 
-      if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
+      var_dump ($dados);
 
-        /*for ($i = 0; $i <= 18; $i++) {
-            echo $dados[$i];
-            echo "<br />\n";
-        }*/
+      /*if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
+        for ($i = 0; $i <= 18; $i++) {
+          echo $dados[$i];
+          echo "<br />\n";
+        }
 
         $sql = "INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
           sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
@@ -61,15 +62,13 @@
           '$dados[12]', '$dados[13]', STR_TO_DATE('$dados[14]','%m-%d-%y'), STR_TO_DATE('$dados[15]','%m-%d-%y'),
           STR_TO_DATE('$dados[16]','%m-%d-%y'), STR_TO_DATE('$dados[17]','%m-%d-%y'), '$dados[18]')";
 
-        if ($conexao->query($sql) === TRUE) {
-          echo "New record created successfully";
-        } else {
-           echo "Error: " . $sql . "<br>" . $conexao->error;
-        }
-
-
-        }
+          if ($conexao->query($sql) === TRUE) {
+            echo "New record created successfully";
+          } else {
+            echo "Error: " . $sql . "<br>" . $conexao->error;
+          }
+        }*/
       }
-    fclose($arquivo);
-  };
+      fclose($arquivo);
+    };
 ?>
