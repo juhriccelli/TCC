@@ -49,8 +49,11 @@
           '$tipo_registro', '$data_processamento', '$data_desfiliacao',
           '$data_cancelamento', '$data_regularizacao', '$motivo_cancelamento')";
 
-          $conexao->query($sql);
-
+          if ($conexao->query($sql) === TRUE) {
+            echo $sql;
+          } else {
+            echo "Deu ruim: " . $sql . "<br>" . $conexao->error;
+          }
         }
       }
       fclose($arquivo);

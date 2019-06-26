@@ -98,7 +98,7 @@
           ";
 
         //Criar a tabela Eleições
-        $eleicoes = "CREATE TABLE filiados (
+        $eleicoes = "CREATE TABLE eleicoes (
           id INT(10) AUTO_INCREMENT PRIMARY KEY,
           data_extracao DATE,
           hora_extracao TIME,
