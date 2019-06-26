@@ -120,7 +120,9 @@
           data_regularizacao DATE,
           motivo_cancelamento VARCHAR(50));
           ";
+
         $conn->exec($filiados);
+        $conn->exec($candidatos);
 
       } catch(PDOException $e) {
         echo $e->getMessage();
