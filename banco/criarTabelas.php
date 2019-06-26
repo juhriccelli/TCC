@@ -4,26 +4,26 @@
 
   //Criar a tabela FILIADOS
   $filiados = "CREATE TABLE filiados (
-    id INT(10) AUTO_INCREMENT PRIMARY KEY,
+    id INT(20) AUTO_INCREMENT PRIMARY KEY,
     data_extracao DATE,
     hora_extracao TIME,
-    numero_inscricao INT(20),
+    numero_inscricao INT(30),
     nome_filiado VARCHAR(200),
     sigla_partido VARCHAR(10),
     nome_partido VARCHAR(100),
     uf VARCHAR(2),
     codigo_municipio INT(10),
-    nome_municipio VARCHAR(200),
+    nome_municipio VARCHAR(255),
     zona_eleitoral INT(4),
     secao_eleitoral INT(4),
     data_filiacao DATE,
     situacao_registro VARCHAR(20),
-    tipo_registro VARCHAR(10),
+    tipo_registro VARCHAR(20),
     data_processamento DATE,
     data_desfiliacao DATE,
     data_cancelamento DATE,
     data_regularizacao DATE,
-    motivo_cancelamento VARCHAR(50));
+    motivo_cancelamento VARCHAR(200));
     ";
 
     //Criar a tabela CANDIDATOS
@@ -110,19 +110,19 @@
       data_desfiliacao DATE,
       data_cancelamento DATE,
       data_regularizacao DATE,
-      motivo_cancelamento VARCHAR(50));
+      motivo_cancelamento VARCHAR(200));
       ";
 
       //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
       if ($conexao->query($filiados) === TRUE) {
-        echo $filiados;
+        //echo $filiados;
       } else {
         echo "Deu ruim: " . $conexao->error ."<br />";
       }
 
       //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
       if ($conexao->query($candidatos) === TRUE) {
-        echo $candidatos;
+        //echo $candidatos;
       } else {
         echo "Deu ruim: " . $conexao->error ."<br />";
       }

@@ -14,7 +14,7 @@
       $dados = explode(';', $linha);
 
       //Retirar aspas do arquivo CSV
-      for($i = 0; $i < 18; $i++){
+      for($i = 0; $i < 19; $i++){
         $dados[$i] = str_replace("\"", "",$dados[$i]);
       }
 
@@ -53,7 +53,7 @@
 
           //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
           if ($conexao->query($sql) === TRUE) {
-            echo $sql;
+            //echo $sql;
           } else {
             echo "Deu ruim: " . $conexao->error ."<br />";
           }
