@@ -16,7 +16,7 @@
       //Retirar aspas do arquivo CSV
       for($i = 0; $i < 19; $i++){
         $dados[$i] = str_replace("\"", "",$dados[$i]);
-        $dados[$i] = mb_convert_encoding($dados[$i], "auto");
+        $dados[$i] = mb_convert_encoding($dados[$i], "utf-8");
       }
 
       //Verifica se a linha é o cabeçalho ou se está vazia. Caso não atenda essas condições, prepara as variáves para inserção no banco
