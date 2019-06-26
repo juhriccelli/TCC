@@ -15,59 +15,43 @@
   foreach($arquivos as $ext){
     $arquivo = fopen ($ext, 'r');
     while(!feof($arquivo)) {
-      $linha = fgets($arquivo, 1024);
+      $linha = fgets($arquivo, 2048);
       $dados = explode(';', $linha);
 
-      $dados[0] = implode("-",array_reverse(explode("/",$dados[0])));
-      $dados[11] = implode("-",array_reverse(explode("/",$dados[11])));
-      $dados[14] = implode("-",array_reverse(explode("/",$dados[14])));
-      $dados[15] = implode("-",array_reverse(explode("/",$dados[15])));
-      $dados[16] = implode("-",array_reverse(explode("/",$dados[16])));
-      $dados[17] = implode("-",array_reverse(explode("/",$dados[17])));
-
-      $dados[0] = (string) $dados[0];
-      $dados[1] = (string) $dados[1];
-      $dados[2] = intval ($dados[2]);
-      $dados[3] = (string) $dados[3];
-      $dados[4] = (string) $dados[4];
-      $dados[5] = (string) $dados[5];
-      $dados[6] = (string) $dados[6];
-      $dados[7] = intval ($dados[7]);
-      $dados[8] = (string) $dados[8];
-      $dados[9] = intval ($dados[9]);
-      $dados[10] = intval ($dados[10]);
-      $dados[11] = (string) $dados[11];
-      $dados[12] = (string) $dados[12];
-      $dados[13] = (string) $dados[13];
-      $dados[14] = (string) $dados[14];
-      $dados[15] = (string) $dados[15];
-      $dados[16] = (string) $dados[16];
-      $dados[17] = (string) $dados[17];
-      $dados[18] = (string) $dados[18];
-
-      var_dump ($dados);
-
-      /*if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
-        for ($i = 0; $i <= 18; $i++) {
-          echo $dados[$i];
-          echo "<br />\n";
-        }
+      if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
+        $data_extracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
+        $hora_extracao = date("H:i:s", strtotime($dados[1]));
+        $numero_inscricao = (integer) $dados[2];
+        $nome_filiado = $dados[3];
+        $sigla_partido = $dados[4];
+        $nome_partido = $dados[5];
+        $uf = $dados[6];
+        $codigo_municipio = (integer) $dados[7];
+        $nome_municipio = $dados[8];
+        $zona_eleitoral = (integer) $dados[9];
+        $secao_eleitoral = (integer) $dados[10];
+        $data_filiacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[11])));
+        $situacao_registro = $dados[12];
+        $tipo_registro = $dados[13];
+        $data_processamento = date("Y-m-d",strtotime(str_replace('/','-',$dados[14])));
+        $data_desfiliacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[15])));
+        $data_cancelamento = date("Y-m-d",strtotime(str_replace('/','-',$dados[16])));
+        $data_regularizacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[17])));
+        $motivo_cancelamento = $dados[18];
 
         $sql = "INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
           sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
-          data_filiacao, situacao_registro, tipo_registro, data_processamento, data_desfiliacao, data_cancelamento,
-          data_regularizacao, motivo_cancelamento)
-          VALUES (STR_TO_DATE('$dados[0]','%m-%d-%y'), STR_TO_DATE('$dados[1]','%h:%i'), '$dados[2]', '$dados[3]', '$dados[4]',
-          '$dados[5]', '$dados[6]', '$dados[7]', '$dados[8]', '$dados[9]', '$dados[10]', STR_TO_DATE('$dados[11]','%m-%d-%y'),
-          '$dados[12]', '$dados[13]', STR_TO_DATE('$dados[14]','%m-%d-%y'), STR_TO_DATE('$dados[15]','%m-%d-%y'),
-          STR_TO_DATE('$dados[16]','%m-%d-%y'), STR_TO_DATE('$dados[17]','%m-%d-%y'), '$dados[18]')";
+          data_filiacao, situacao_registro, tipo_registro, data_processamento, data_desfiliacao,
+          data_cancelamento, data_regularizacao, motivo_cancelamento)
+          VALUES ('$data_extracao', '$hora_extracao', '$numero_inscricao',
+          '$nome_filiado', '$sigla_partido', '$nome_partido', '$uf', '$codigo_municipio', '$nome_municipio',
+          '$zona_eleitoral', '$secao_eleitoral', '$data_filiacao', '$situacao_registro',
+          '$tipo_registro', '$data_processamento', '$data_desfiliacao',
+          '$data_cancelamento', '$data_regularizacao', '$motivo_cancelamento')";
 
-          if ($conexao->query($sql) === TRUE) {
-            echo "New record created successfully";
-          } else {
-            echo "Error: " . $sql . "<br>" . $conexao->error;
-          }
-        }*/
+          $conexao->query($sql);
+
+        }
       }
       fclose($arquivo);
     };
