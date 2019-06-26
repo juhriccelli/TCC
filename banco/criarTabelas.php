@@ -4,16 +4,16 @@
 
   //Criar a tabela FILIADOS
   $filiados = "CREATE TABLE filiados (
-    id INT(20) AUTO_INCREMENT PRIMARY KEY,
+    id INT(10) AUTO_INCREMENT PRIMARY KEY,
     data_extracao DATE,
     hora_extracao TIME,
-    numero_inscricao INT(30),
-    nome_filiado VARCHAR(200),
+    numero_inscricao BIGINT(20),
+    nome_filiado VARCHAR(4000),
     sigla_partido VARCHAR(10),
     nome_partido VARCHAR(100),
     uf VARCHAR(2),
     codigo_municipio INT(10),
-    nome_municipio VARCHAR(255),
+    nome_municipio VARCHAR(4000),
     zona_eleitoral INT(4),
     secao_eleitoral INT(4),
     data_filiacao DATE,
@@ -23,7 +23,7 @@
     data_desfiliacao DATE,
     data_cancelamento DATE,
     data_regularizacao DATE,
-    motivo_cancelamento VARCHAR(200));
+    motivo_cancelamento VARCHAR(4000));
     ";
 
     //Criar a tabela CANDIDATOS
