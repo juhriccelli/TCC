@@ -16,6 +16,7 @@
       //Retirar aspas do arquivo CSV
       for($i = 0; $i < 19; $i++){
         $dados[$i] = str_replace("\"", "",$dados[$i]);
+        $dados[$i] = mb_convert_encoding($dados[$i], "auto");
       }
 
       //Verifica se a linha é o cabeçalho ou se está vazia. Caso não atenda essas condições, prepara as variáves para inserção no banco
@@ -53,7 +54,7 @@
 
           //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
           if ($conexao->query($sql) === TRUE) {
-            echo "Cadastro de " . $nome_filiado . " realizado com sucesso <br />"
+            echo "Cadastro de " . $nome_filiado . " realizado com sucesso <br />";
           } else {
             echo "Deu ruim: " . $conexao->error ."<br />";
           }
