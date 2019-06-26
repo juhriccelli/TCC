@@ -53,7 +53,7 @@
 
           //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
           if ($conexao->query($sql) === TRUE) {
-            //echo $sql;
+            echo "Cadastro de " . $nome_filiado . " realizado com sucesso <br />"
           } else {
             echo "Deu ruim: " . $conexao->error ."<br />";
           }

@@ -115,14 +115,14 @@
 
       //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
       if ($conexao->query($filiados) === TRUE) {
-        //echo $filiados;
+        echo "Tabela criada com sucesso <br />";
       } else {
         echo "Deu ruim: " . $conexao->error ."<br />";
       }
 
       //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
       if ($conexao->query($candidatos) === TRUE) {
-        //echo $candidatos;
+        echo "Tabela criada com sucesso <br />";
       } else {
         echo "Deu ruim: " . $conexao->error ."<br />";
       }
