@@ -1,23 +1,24 @@
-  <?php
+<?php
   //Conectar o banco de dados
-  $servername = "localhost";
-  $username = "id9315071_admin";
-  $password = "admin";
-  $database = "id9315071_tcc";
-
-  $conexao = mysqli_connect($servername, $username, $password, $database);
+  require_once('conectarBD.php');
 
   //descobrir quantidade de arquivos na pasta
   chdir($_SERVER['DOCUMENT_ROOT']."/temp/filiados/aplic/sead/lista_filiados/uf/");
   $arquivos = glob("{*.csv,*.txt}", GLOB_BRACE);
 
-  //inserir linhas do csv no banco de dados
+  //Abre os arquivos CSV, pega a linha e coloca em um array.
   foreach($arquivos as $ext){
     $arquivo = fopen ($ext, 'r');
     while(!feof($arquivo)) {
       $linha = fgets($arquivo, 2048);
       $dados = explode(';', $linha);
 
+      //Retirar aspas do arquivo CSV
+      for($i = 0; $i < 18; $i++){
+        $dados[$i] = str_replace("\"", "",$dados[$i]);
+      }
+
+      //Verifica se a linha é o cabeçalho ou se está vazia. Caso não atenda essas condições, prepara as variáves para inserção no banco
       if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
         $data_extracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
         $hora_extracao = date("H:i:s", strtotime($dados[1]));
@@ -39,6 +40,7 @@
         $data_regularizacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[17])));
         $motivo_cancelamento = $dados[18];
 
+        //SQL com o Insert pra ser inserido no banco.
         $sql = "INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
           sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
           data_filiacao, situacao_registro, tipo_registro, data_processamento, data_desfiliacao,
@@ -49,11 +51,13 @@
           '$tipo_registro', '$data_processamento', '$data_desfiliacao',
           '$data_cancelamento', '$data_regularizacao', '$motivo_cancelamento')";
 
+          //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
           if ($conexao->query($sql) === TRUE) {
             echo $sql;
           } else {
-            echo "Deu ruim: " . $sql . "<br>" . $conexao->error;
+            echo "Deu ruim: " . $conexao->error ."<br />";
           }
+
         }
       }
       fclose($arquivo);
