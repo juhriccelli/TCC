@@ -21,93 +21,76 @@
         $dados[$i] = utf8_encode($dados[$i]);
       }
 
-      //Verifica se a linha é o cabeçalho ou se está vazia. Caso não atenda essas condições, prepara as variáves para inserção no banco
-      if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
-        $data_extracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
-        $hora_extracao = date("H:i:s", strtotime($dados[1]));
-        $numero_inscricao = (integer) $dados[2];
-        $nome_filiado = $dados[3];
-        $sigla_partido = $dados[4];
-        $nome_partido = $dados[5];
-        $uf = $dados[6];
-        $codigo_municipio = (integer) $dados[7];
-        $nome_municipio = $dados[8];
-        $zona_eleitoral = (integer) $dados[9];
-        $secao_eleitoral = (integer) $dados[10];
-        $data_filiacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[11])));
-        $situacao_registro = $dados[12];
-        $tipo_registro = $dados[13];
-        $data_processamento = date("Y-m-d",strtotime(str_replace('/','-',$dados[14])));
-        $data_desfiliacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[15])));
-        $data_cancelamento = date("Y-m-d",strtotime(str_replace('/','-',$dados[16])));
-        $data_regularizacao = date("Y-m-d",strtotime(str_replace('/','-',$dados[17])));
-        $motivo_cancelamento = $dados[18];
+      //Verifica o ano da eleição para melhor preenchimento dos dados.
+      if($dados[3] >= 2016){
+        //Verifica se a linha é o cabeçalho ou se está vazia. Caso não atenda essas condições, prepara as variáves para inserção no banco
+        if($dados[0] != 'DATA DA EXTRACAO' && !empty($linha)) {
+          $dt_geracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
+          $hh_geracao  = date("H:i:s", strtotime($dados[1]));
+          $ano_eleicao = date("Y", strtotime($dados[2]));
+          $cd_tipo_eleicao = (integer) $dados[3];
+          $nm_tipo_eleicao = $dados[4];
+          $nr_turno = (integer) $dados[5];
+          $cd_eleicao = (integer) $dados[6];
+          $ds_eleicao = $dados[7];
+          $dt_eleicao = date("Y-m-d",strtotime(str_replace('/','-',$dados[8])));
+          $tp_abrangencia = $dados[9];
+          $sg_uf = $dados[10];
+          $sg_ue = $dados[11];
+          $nm_ue = $dados[12];
+          $cd_municipio = (integer) $dados[13];
+          $nm_municipio = $dados[14];
+          $nr_zona = (integer) $dados[15];
+          $cd_cargo = (integer) $dados[16];
+          $ds_cargo = $dados[17];
+          $sq_candidato = (integer) $dados[18];
+          $nr_candidato = (integer) $dados[19];
+          $nm_candidato = $dados[20];
+          $nm_urna_candidato = $dados[21];
+          $nm_social_candidato = $dados[22];
+          $cd_situacao_candidatura = (integer) $dados[23];
+          $ds_situacao_candidatura = $dados[24];
+          $cd_detalhe_situacao_cand = (integer) $dados[25];
+          $ds_detalhe_situacao_cand = $dados[26];
+          $tp_agremiacao = $dados[27];
+          $nr_partido = (integer) $dados[28];
+          $sg_partido = $dados[29];
+          $nm_partido = $dados[30];
+          $sq_coligacao = (integer) $dados[31];
+          $nm_coligacao = $dados[32];
+          $ds_composicao_coligacao = $dados[33];
+          $cd_sit_tot_turno = (integer) $dados[34];
+          $ds_sit_tot_turno = $dados[35];
+          $st_voto_em_transito = $dados[36];
+          $qt_votos_nominais = (integer) $dados[37];
 
-        $dt_geracao = $dados[0];
-        $hh_geracao  = $dados[0];
-        $ano_eleicao = $dados[0];
-        $cd_tipo_eleicao = $dados[0];
-        $nm_tipo_eleicao = $dados[0];
-        $nr_turno = $dados[0];
-        $cd_eleicao = $dados[0];
-        $ds_eleicao = $dados[0];
-        $dt_eleicao = $dados[0];
-        $tp_abrangencia = $dados[0];
-        $sg_uf = $dados[0];
-        $sg_ue = $dados[0];
-        $nm_ue = $dados[0];
-        $cd_municipio = $dados[0];
-        $nm_municipio = $dados[0];
-        $nr_zona = $dados[0];
-        $cd_cargo = $dados[0];
-        $ds_cargo = $dados[0];
-        $sq_candidato = $dados[0];
-        $nr_candidato = $dados[0];
-        $nm_candidato = $dados[0];
-        $nm_urna_candidato = $dados[0];
-        $nm_social_candidato = $dados[0];
-        $cd_situacao_candidatura = $dados[0];
-        $ds_situacao_candidatura = $dados[0];
-        $cd_detalhe_situacao_cand = $dados[0];
-        $ds_detalhe_situacao_cand = $dados[0];
-        $tp_agremiacao = $dados[0];
-        $nr_partido = $dados[0];
-        $sg_partido = $dados[0];
-        $nm_partido = $dados[0];
-        $sq_coligacao = $dados[0];
-        $nm_coligacao = $dados[0];
-        $ds_composicao_coligacao = $dados[0];
-        $cd_sit_tot_turno = $dados[0];
-        $ds_sit_tot_turno = $dados[0];
-        $st_voto_em_transito = $dados[0];
-        $qt_votos_nominais = $dados[0]; 
+          //SQL com o Insert pra ser inserido no banco.
+          $sql = "INSERT INTO eleicoes (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
+            nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_municipio,
+            nm_municipio, nr_zona, cd_cargo, ds_cargo, sq_candidato, nr_candidato, data_filiacao, situacao_registro,
+            tipo_registro, data_processamento, data_desfiliacao, nm_candidato, nm_urna_candidato, nm_social_candidato,
+            cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
+            tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
+            cd_sit_tot_turno, ds_sit_tot_turno, st_voto_em_transito, qt_votos_nominais)
+            VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao', '$nr_turno',
+              '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf, '$sg_ue', '$nm_ue', '$cd_municipio',
+              '$nm_municipio', '$nr_zona', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato', '$data_filiacao',
+              '$situacao_registro', '$tipo_registro', '$data_processamento', '$data_desfiliacao', '$nm_candidato',
+              '$nm_urna_candidato', '$nm_social_candidato', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
+              '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
+              '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_sit_tot_turno',
+              '$ds_sit_tot_turno', '$st_voto_em_transito', '$qt_votos_nominais')";
 
-        //SQL com o Insert pra ser inserido no banco.
-        $sql = "INSERT INTO eleicoes (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
-          nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_municipio,
-          nm_municipio, nr_zona, cd_cargo, ds_cargo, sq_candidato, nr_candidato, data_filiacao, situacao_registro,
-          tipo_registro, data_processamento, data_desfiliacao, nm_candidato, nm_urna_candidato, nm_social_candidato,
-          cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
-          tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
-          cd_sit_tot_turno, ds_sit_tot_turno, st_voto_em_transito, qt_votos_nominais)
-          VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao', '$nr_turno',
-            '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf, '$sg_ue', '$nm_ue', '$cd_municipio',
-            '$nm_municipio', '$nr_zona', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato', '$data_filiacao',
-            '$situacao_registro', '$tipo_registro', '$data_processamento', '$data_desfiliacao', '$nm_candidato',
-            '$nm_urna_candidato', '$nm_social_candidato', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
-            '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
-            '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_sit_tot_turno',
-            '$ds_sit_tot_turno', '$st_voto_em_transito', '$qt_votos_nominais')";
-
-          //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
-          if ($conexao->query($sql) === TRUE) {
-            echo "Cadastro de " . $nome_filiado . " realizado com sucesso <br />";
-          } else {
-            echo "Deu ruim: " . $conexao->error ."<br />";
+            //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
+            if ($conexao->query($sql) === TRUE) {
+              echo "Cadastro de " . $nome_filiado . " realizado com sucesso <br />";
+            } else {
+              echo "Deu ruim: " . $conexao->error ."<br />";
+            }
           }
-
-        }
       }
-      fclose($arquivo);
-    };
+
+    }
+    fclose($arquivo);
+  };
 ?>
