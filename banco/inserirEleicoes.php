@@ -90,7 +90,7 @@
               echo "Deu ruim: " . $conexao->error ."<br />";
             }
           }
-          elseif ($dados[2] == 2014) {
+          /*elseif ($dados[2] == 2014) {
             //Verifica se a linha é o cabeçalho ou se está vazia. Caso não atenda essas condições, prepara as variáves para inserção no banco
             if($dados[0] != 'DATA_GERACAO' && !empty($linha)) {
               $dt_geracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
@@ -226,7 +226,7 @@
                 echo "Deu ruim: " . $conexao->error ."<br />";
               }
             }
-          }
+          }*/
 
     }
     fclose($arquivo);
