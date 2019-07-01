@@ -42,7 +42,7 @@
   function insert2016($dados, $conexao){
      $dt_geracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
      $hh_geracao = date("H:i:s", strtotime($dados[1]));
-     $ano_eleicao = date("Y", strtotime($dados[2]));
+     $ano_eleicao = (integer) $dados[2];
      $cd_tipo_eleicao = (integer) $dados[3];
      $nm_tipo_eleicao = $dados[4];
      $nr_turno = (integer) $dados[5];
@@ -108,7 +108,7 @@
   function insert2014($dados, $conexao){
     $dt_geracao = date("Y-m-d",strtotime(str_replace('/','-',$dados[0])));
     $hh_geracao  = date("H:i:s", strtotime($dados[1]));
-    $ano_eleicao = date("Y", strtotime($dados[2]));
+    $ano_eleicao = (integer) $dados[2];
     $nr_turno = (integer) $dados[3];
     $ds_eleicao = $dados[4];
     $sg_uf = $dados[5];
