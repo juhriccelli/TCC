@@ -40,7 +40,7 @@
       dt_eleicao DATE,
       tp_abrangencia VARCHAR(200),
       sg_uf VARCHAR(2),
-      sg_ue VARCHAR(2),
+      sg_ue VARCHAR(10),
       nm_ue VARCHAR(50),
       cd_cargo INT(2),
       ds_cargo VARCHAR(1000),
