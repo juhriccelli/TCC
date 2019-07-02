@@ -1,6 +1,6 @@
 <?php
   //Conectar o banco de dados
-  require_once('conectarBD.php');
+  require_once('../conectarBD.php');
 
   //descobrir quantidade de arquivos na pasta
   chdir($_SERVER['DOCUMENT_ROOT']."/temp/filiados/aplic/sead/lista_filiados/uf/");

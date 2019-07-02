@@ -1,6 +1,6 @@
 <?php
   //Conectar o banco de dados
-  require_once('conectarBD.php');
+  require_once('../conectarBD.php');
 
   //Criar a tabela FILIADOS
   $filiados = "CREATE TABLE filiados (

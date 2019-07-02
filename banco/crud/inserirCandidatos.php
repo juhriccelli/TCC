@@ -1,6 +1,6 @@
 <?php
   //Conectar o banco de dados
-  require_once('conectarBD.php');
+  require_once('../conectarBD.php');
 
   //descobrir quantidade de arquivos na pasta
   chdir($_SERVER['DOCUMENT_ROOT']."/temp/candidatura/");
@@ -269,7 +269,7 @@
      $nm_municipio_nascimento  = $dados[39];
      $nr_despesa_max_campanha = (integer) $dados[40];
      $cd_sit_tot_turno = (integer) $dados[41];
-     $ds_sit_tot_turno = $dados[42]; 
+     $ds_sit_tot_turno = $dados[42];
 
 
      $dt_eleicao = "";
