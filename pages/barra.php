@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <span class="navbar-brand">CandMap</span>
 
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">

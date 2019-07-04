@@ -1,9 +1,10 @@
 .capa{
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  padding-top: 5%;
   background-color: green;
 }
 
-svg:hover path {
+#ac, #al, #ap, #am, #ba, #ce, #df, #es, #go, #ma, #mt, #ms, #mg, #pa, #pb,#pr, #pe, #pi, #rj, #rn, #rs, #ro, #rr, #sc, #sp, #se, #to:hover path {
   fill: #fce57e;
 }
