@@ -5,6 +5,19 @@
   background-color: green;
 }
 
-#ac, #al, #ap, #am, #ba, #ce, #df, #es, #go, #ma, #mt, #ms, #mg, #pa, #pb,#pr, #pe, #pi, #rj, #rn, #rs, #ro, #rr, #sc, #sp, #se, #to:hover path {
-  fill: #fce57e;
+#img-brasil path{
+  fill:#999999;
+  stroke:#ffffff;
+  stroke-width:282.23678589;
+  stroke-miterlimit:4;
+  stroke-dasharray:none;
+  stroke-opacity:1;
+}
+
+#img-brasil a{
+  cursor: pointer;
+}
+
+#img-brasil a:hover{
+  fill: orange;
 }
