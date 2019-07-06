@@ -5,19 +5,10 @@
   background-color: green;
 }
 
-#img-brasil path{
-  fill:#999999;
-  stroke:#ffffff;
-  stroke-width:282.23678589;
-  stroke-miterlimit:4;
-  stroke-dasharray:none;
-  stroke-opacity:1;
-}
-
-#img-brasil a{
-  cursor: pointer;
-}
-
-#img-brasil a:hover{
-  fill: orange;
+.land{
+  fill: #CCCCCC;
+  fill-opacity: 1;
+  stroke:white;
+  stroke-opacity: 1;
+  stroke-width:0.5;
 }
