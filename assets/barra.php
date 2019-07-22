@@ -2,12 +2,12 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset=”UTF-8”>
-  <link rel="stylesheet" href="../assets/estilo.css">
-  <link rel="stylesheet" href="../assets/bootstrap.min.css">
-  <script src="../assets/script.js"></script>
-  <script src="../assets/jquery.min.js"></script>
-  <script src="../assets/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/css/estilo.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
