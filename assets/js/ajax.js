@@ -27,18 +27,18 @@
  /**
   * Função para enviar os dados
   */
- function getDados() {
+ function buscarPorEstados(est) {
 
      // Declaração de Variáveis
-     var nome   = document.getElementById("txtnome").value;
-     var result = document.getElementById("Resultado");
+     var estado = est;
+     var result = document.getElementById("p40");
      var xmlreq = CriaRequest();
 
      // Exibi a imagem de progresso
-     result.innerHTML = '<img src="Progresso1.gif"/>';
+     result.innerHTML = '<img src="loading.gif"/>';
 
      // Iniciar uma requisição
-     xmlreq.open("GET", "Contato.php?txtnome=" + nome, true);
+     xmlreq.open("GET", "resultadoEstado.php?estado=" + estado, true);
 
      // Atribui uma função para ser executada sempre que houver uma mudança de ado
      xmlreq.onreadystatechange = function(){
