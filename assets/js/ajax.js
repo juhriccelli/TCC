@@ -31,7 +31,7 @@
 
      // Declaração de Variáveis
      var estado = est;
-     var result = document.getElementById("p40");
+     var result = document.getElementById("base-resultado");
      var xmlreq = CriaRequest();
 
      // Exibi a imagem de progresso

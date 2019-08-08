@@ -14,7 +14,6 @@ svg {
     top: 0;
     left: 0;
     padding: 1%;
-    background-color: blue;
     height: auto;
     width: auto;
     max-width: 100%;
@@ -24,17 +23,17 @@ svg {
 .img-brasil{
   background: red;
   padding: 10px;
-  width: 60%;
+  width: 40%;
   height: 100%;
   align-items: center;
   position: relative;
 
 }
 
-.p40{
+.base-resultado{
   background: yellow;
   padding: 10px;
-  width: 40%;
+  width: 60%;
   height: 100%;
 
 }
