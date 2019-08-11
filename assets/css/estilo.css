@@ -48,4 +48,5 @@ svg {
 
 .land:hover{
   fill: orange;
+  cursor: pointer;
 }
