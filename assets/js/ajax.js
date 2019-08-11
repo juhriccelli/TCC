@@ -37,9 +37,11 @@ $(document).ready(function(){
  function AtualizarSQL() {
 
      // Declaração de Variáveis
-     var nome   = document.getElementById("txtnome").value;
+     var estado = document.getElementById("id").value;
      var result = document.getElementById("Resultado");
      var xmlreq = CriaRequest();
+
+     alert(estado);
 
      // Exibi a imagem de progresso
      result.innerHTML = '<img src="Progresso1.gif"/>';
