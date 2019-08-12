@@ -2,8 +2,8 @@
 
 //https://www.devmedia.com.br/executando-consultas-ao-mysql-com-php-e-ajax/26008
 // Verifica se existe a variável txtnome
-if (isset($_GET["txtnome"])) {
-    $nome = $_GET["txtnome"];
+if (isset($_GET["id"])) {
+    $nome = $_GET["id"];
 
     //Conectar o banco de dados
     require_once('../banco/conectarBD.php');
@@ -12,10 +12,10 @@ if (isset($_GET["txtnome"])) {
     require_once('../assets/barra.php');
 
     // Verifica se a variável está vazia
-    if (empty($nome)) {
+    if (empty($estado)) {
         $sql = "SELECT * FROM contato";
     } else {
-        $nome .= "%";
+        $estado .= "%";
         $sql = "SELECT * FROM contato WHERE nome like '$nome'";
     }
     sleep(1);

@@ -1,67 +1,65 @@
-$(document).ready(function(){
-    $(".estados").on('click', function(){
-       alert('Funcionando');
-       AtualizarSQL(); //Your function
-    });
+$(document).ready(function() {
+  $(".estados").on('click', function() {
+    alert('Funcionando');
+    AtualizarSQL(); //Your function
+  });
 });
 
 /**
-  * Função para criar um objeto XMLHTTPRequest
-  */
- function CriaRequest() {
-     try{
-         request = new XMLHttpRequest();
-     }catch (IEAtual){
+ * Função para criar um objeto XMLHTTPRequest
+ */
+function CriaRequest() {
+  try {
+    request = new XMLHttpRequest();
+  } catch (IEAtual) {
 
-         try{
-             request = new ActiveXObject("Msxml2.XMLHTTP");
-         }catch(IEAntigo){
+    try {
+      request = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (IEAntigo) {
 
-             try{
-                 request = new ActiveXObject("Microsoft.XMLHTTP");
-             }catch(falha){
-                 request = false;
-             }
-         }
-     }
+      try {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+      } catch (falha) {
+        request = false;
+      }
+    }
+  }
 
-     if (!request)
-         alert("Seu Navegador não suporta Ajax!");
-     else
-         return request;
- }
+  if (!request)
+    alert("Seu Navegador não suporta Ajax!");
+  else
+    return request;
+}
 
- /**
-  * Função para enviar os dados
-  */
- function AtualizarSQL() {
+/**
+ * Função para enviar os dados
+ */
+function AtualizarSQL() {
 
-     // Declaração de Variáveis
-     var estado = document.getElementById("id").value;
-     var result = document.getElementById("Resultado");
-     var xmlreq = CriaRequest();
+  // Declaração de Variáveis
+  var estado = document.getElementById("id").value;
+  var result = document.getElementById("base-resultado");
+  var xmlreq = CriaRequest();
 
-     alert(estado);
+  // Exibi a imagem de progresso
+  result.innerHTML = '<img src=../assets/img/loading.gif"/>';
 
-     // Exibi a imagem de progresso
-     result.innerHTML = '<img src="Progresso1.gif"/>';
+  // Iniciar uma requisição
+  xmlreq.open("GET", "../pages/resultadoEstado.php?id=" + estado, true);
 
-     // Iniciar uma requisição
-     xmlreq.open("GET", "Contato.php?txtnome=" + nome, true);
+  // Atribui uma função para ser executada sempre que houver uma mudança de ado
+  xmlreq.onreadystatechange = function() {
 
-     // Atribui uma função para ser executada sempre que houver uma mudança de ado
-     xmlreq.onreadystatechange = function(){
+    // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
+    if (xmlreq.readyState == 4) {
 
-         // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
-         if (xmlreq.readyState == 4) {
-
-             // Verifica se o arquivo foi encontrado com sucesso
-             if (xmlreq.status == 200) {
-                 result.innerHTML = xmlreq.responseText;
-             }else{
-                 result.innerHTML = "Erro: " + xmlreq.statusText;
-             }
-         }
-     };
-     xmlreq.send(null);
- }
+      // Verifica se o arquivo foi encontrado com sucesso
+      if (xmlreq.status == 200) {
+        result.innerHTML = xmlreq.responseText;
+      } else {
+        result.innerHTML = "Erro: " + xmlreq.statusText;
+      }
+    }
+  };
+  xmlreq.send(null);
+}
