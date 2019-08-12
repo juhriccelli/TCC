@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(".estados").on('click', function() {
-    alert('Funcionando');
+    //alert('Funcionando');
     AtualizarSQL(); //Your function
   });
 });
