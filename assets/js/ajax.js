@@ -41,6 +41,8 @@ function AtualizarSQL() {
   var result = document.getElementById("base-resultado");
   var xmlreq = CriaRequest();
 
+  alert(estado);
+
   // Exibi a imagem de progresso
   result.innerHTML = '<img src=../assets/img/loading.gif"/>';
 
