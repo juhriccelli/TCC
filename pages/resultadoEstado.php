@@ -33,7 +33,7 @@
       <tbody>
         <?php
             foreach ($conexao->query("SELECT * FROM filiados where uf like '%$estado%'") as $linha) {
-              echo "<tr>";
+              echo "<tr class='detalhamento' id={$linha['numero_inscricao']}>";
               echo "<td>{$linha['nome_filiado']}</td>";
               echo "<td>{$linha['uf']}</td>";
               echo "<td>{$linha['nome_municipio']}</td>";
