@@ -1,8 +1,11 @@
 $(document).ready(function() {
   $(".estados").on('click', function() {
-    AtualizarSQL();
+    estado = $(this).attr('id');
+    buscaPorEstado(estado);
   });
 });
+
+
 
 /**
  * Função para criar um objeto XMLHTTPRequest
@@ -33,21 +36,17 @@ function CriaRequest() {
 /**
  * Função para enviar os dados
  */
-function AtualizarSQL() {
+function buscaPorEstado(estado) {
 
   // Declaração de Variáveis
-  //var estado = document.getElementById(this.id);
-  console.log(estado);
-  var result = document.getElementById("base-resultado");
+  var result = document.getElementById("tabela");
   var xmlreq = CriaRequest();
 
-  alert(estado);
-
   // Exibi a imagem de progresso
-  result.innerHTML = '<img src=../assets/img/loading.gif"/>';
+  result.innerHTML = '<img src="../assets/img/loading.gif"/>';
 
   // Iniciar uma requisição
-  xmlreq.open("GET", "../pages/resultadoEstado.php?id=" + estado, true);
+  xmlreq.open("GET", "../pages/resultadoEstado.php?estado=" + estado, true);
 
   // Atribui uma função para ser executada sempre que houver uma mudança de ado
   xmlreq.onreadystatechange = function() {

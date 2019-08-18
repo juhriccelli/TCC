@@ -17,8 +17,8 @@
 <html lang="pt-br">
 
 <body>
-  <div>
-    <table class="table table-hover">
+  <div class="base-tabela">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">Nome: </th>
@@ -26,8 +26,8 @@
           <th scope="col">Municipio: </th>
           <th scope="col">Sigla do Partido: </th>
           <th scope="col">Nome do Partido: </th>
-          <!--<th scope="col">Data de Filiação: </th>
-          <th scope="col">Situação da Filiação: </th>-->
+          <th scope="col">Data de Filiação: </th>
+          <th scope="col">Situação da Filiação: </th>
         </tr>
       </thead>
       <tbody>
@@ -39,9 +39,9 @@
               echo "<td>{$linha['nome_municipio']}</td>";
               echo "<td>{$linha['sigla_partido']}</td>";
               echo "<td>{$linha['nome_partido']}</td>";
-              //$data = date('d/m/Y', strtotime($linha['data_filiacao']));
-              //echo "<td>{$data}</td>";
-              //echo "<td>{$linha['situacao_registro']}</td>";
+              $data = date('d/m/Y', strtotime($linha['data_filiacao']));
+              echo "<td>{$data}</td>";
+              echo "<td>{$linha['situacao_registro']}</td>";
               echo "</tr>";
             }
           ?>

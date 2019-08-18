@@ -8,8 +8,8 @@
   align-content: stretch;
 }
 
-.base-tabela{
-  padding-top: 60px;
+table tr {
+    cursor: pointer;
 }
 
 svg {
