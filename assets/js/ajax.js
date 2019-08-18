@@ -47,7 +47,7 @@ function CriaRequest() {
 function buscaPorEstado(estado) {
 
   // Declaração de Variáveis
-  var result = document.getElementById("tabela");
+  var result = document.getElementById("ajaxNormal");
   var xmlreq = CriaRequest();
 
   // Exibi a imagem de progresso
@@ -76,7 +76,7 @@ function buscaPorEstado(estado) {
 function maisDetalhes(titulo) {
 
   // Declaração de Variáveis
-  var result = document.getElementById("base-flex");
+  var result = document.getElementById("ajaxDetalhes");
   var xmlreq = CriaRequest();
 
   // Exibi a imagem de progresso
