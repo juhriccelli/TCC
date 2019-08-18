@@ -4,6 +4,9 @@
 
   //Inserir a barra de navegação
   require_once('../assets/barra.php');
+
+  //Inserir o CSS e o Javascript
+  require_once('../assets/custom.php');
 ?>
 
 <!DOCTYPE HTML>
