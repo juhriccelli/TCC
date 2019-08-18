@@ -32,7 +32,7 @@
       </thead>
       <tbody>
         <?php
-            foreach ($conexao->query("SELECT * FROM filiados where numero_inscricao like '%$titulo%'") as $linha) {
+            foreach ($conexao->query("SELECT * FROM filiados where numero_inscricao like '%$titulo%' AND situacao_registro like 'REGULAR'") as $linha) {
               echo "<tr>";
               echo "<td>{$linha['nome_filiado']}</td>";
               echo "<td>{$linha['uf']}</td>";
