@@ -8,8 +8,8 @@
   //Inserir o CSS e o Javascript
   require_once('../assets/custom.php');
 
-  if (isset($_GET["detalhe"])) {
-    $detalhes = $_GET["detalhe"];
+  if (isset($_GET["titulo"])) {
+    $titulo = $_GET["titulo"];
   }
 ?>
 
@@ -32,7 +32,7 @@
       </thead>
       <tbody>
         <?php
-            foreach ($conexao->query("SELECT * FROM filiados where numero_inscricao like '%$detalhes%'") as $linha) {
+            foreach ($conexao->query("SELECT * FROM filiados where numero_inscricao like '%$titulo%'") as $linha) {
               echo "<tr>";
               echo "<td>{$linha['nome_filiado']}</td>";
               echo "<td>{$linha['uf']}</td>";

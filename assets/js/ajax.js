@@ -6,15 +6,14 @@ $(document).ready(function() {
   });
 });
 
-/*Evento para escutar em pessoa esta querendo ver detalhes*/
-$(document).ready(function() {
-  $(".detalhamento").on('click', function() {
-    var detalhe = $(this).attr('id');
-    subconsulta(detalhe);
-  });
+/*Evento para saber qual pessoa deseja mais detalhes */
+$(function(){
+    $(document).on('click', '.detalhar', function(e) {
+        e.preventDefault;
+        var titulo = $(this).data('nome');
+        maisDetalhes(titulo);
+    });
 });
-
-
 
 /**
  * Função para criar um objeto XMLHTTPRequest
@@ -74,18 +73,17 @@ function buscaPorEstado(estado) {
   xmlreq.send(null);
 }
 
-
-function subconsulta(detalhe) {
+function maisDetalhes(titulo) {
 
   // Declaração de Variáveis
-  var result = document.getElementById("teste");
+  var result = document.getElementById("base-flex");
   var xmlreq = CriaRequest();
 
   // Exibi a imagem de progresso
   result.innerHTML = '<img src="../assets/img/loading.gif"/>';
 
   // Iniciar uma requisição
-  xmlreq.open("GET", "../pages/detalhes.php?detalhe=" + detalhe, true);
+  xmlreq.open("GET", "../pages/detalhes.php?titulo=" + titulo, true);
 
   // Atribui uma função para ser executada sempre que houver uma mudança de ado
   xmlreq.onreadystatechange = function() {
