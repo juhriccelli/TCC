@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $(".estados").on('click', function() {
-    //alert('Funcionando');
-    AtualizarSQL(); //Your function
+    AtualizarSQL();
   });
 });
 
@@ -37,7 +36,8 @@ function CriaRequest() {
 function AtualizarSQL() {
 
   // Declaração de Variáveis
-  var estado = document.getElementById("id").value;
+  //var estado = document.getElementById(this.id);
+  console.log(estado);
   var result = document.getElementById("base-resultado");
   var xmlreq = CriaRequest();
 

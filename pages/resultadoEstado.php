@@ -7,13 +7,17 @@
 
   //Inserir o CSS e o Javascript
   require_once('../assets/custom.php');
+
+  if (isset($_GET["estado"])) {
+    $estado = $_GET["estado"];
+  }
 ?>
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
 
 <body>
-  <div class="base-flex">
+  <div class="base-tabela">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -27,20 +31,21 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <?php
-            $estado = "rr";
-            foreach ($dbh->query("SELECT * FROM filiados where uf = $estado") as $linha) {
+        <?php
+            //$estado = "rr";
+            foreach ($conexao->query("SELECT * FROM filiados where uf like '%$estado%'") as $linha) {
+              echo "<tr>";
               echo "<td>{$linha['nome_filiado']}</td>";
               echo "<td>{$linha['uf']}</td>";
-              echo "<td>{$linha['nome_municipio']}a</td>";
+              echo "<td>{$linha['nome_municipio']}</td>";
               echo "<td>{$linha['sigla_partido']}</td>";
               echo "<td>{$linha['nome_partido']}</td>";
-              echo "<td>{$linha['data_filiacao']}</td>";
+              $data = date('d/m/Y', strtotime($linha['data_filiacao']));
+              echo "<td>{$data}</td>";
               echo "<td>{$linha['situacao_registro']}</td>";
+              echo "</tr>";
             }
           ?>
-        </tr>
       </tbody>
     </table>
   </div>

@@ -8,6 +8,9 @@
   align-content: stretch;
 }
 
+.base-tabela{
+  padding-top: 60px;
+}
 
 svg {
     position: absolute;
