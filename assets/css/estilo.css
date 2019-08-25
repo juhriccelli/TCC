@@ -56,6 +56,19 @@
   fill: orange;
 }
 
+.linhaBandeiras{
+  width: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.bandeiras{
+  margin: 2%;
+  width: 15%;
+  height: 15%;
+}
+
 svg {
     position: absolute;
     top: 0;

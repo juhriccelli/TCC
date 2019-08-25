@@ -135,41 +135,6 @@
           </span>
         </div>
         <div class="base-bandeiras" >
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-          </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-          </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-          </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-          </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-          </div>
 
         </div>
       </div>
