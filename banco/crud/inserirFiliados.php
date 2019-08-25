@@ -14,7 +14,8 @@
       $dados = explode(';', $linha);
 
       //Retirar aspas do arquivo CSV
-      for($i = 0; $i < 19; $i++){
+      $qtdLin = sizeof($dados);
+      for($i = 0; $i < $qtdLin; $i++){
         $dados[$i] = str_replace("\"", "",$dados[$i]);
         $dados[$i] = utf8_encode($dados[$i]);
       }
