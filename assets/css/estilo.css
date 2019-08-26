@@ -8,12 +8,10 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-content: stretch;
 }
 
-.base-mapa{
-  width: 40%;
+.base-objeto{
+  width: 45%;
   height: 100%;
   align-items: center;
   position: relative;
@@ -21,9 +19,10 @@
 }
 
 .base-resultado{
-  width: 60%;
+  width: 55%;
   height: 100%;
   overflow: auto;
+  align: center;
 }
 
 .base-tabela{
@@ -56,17 +55,18 @@
   fill: orange;
 }
 
-.linhaBandeiras{
+.linhaImg{
   width: 100%;
   width: 80%;
   display: flex;
   align-items: center;
 }
 
-.bandeiras{
-  margin: 2%;
+.imagem{
   width: 15%;
   height: 15%;
+  cursor: pointer;
+  margin: 2%;
 }
 
 svg {

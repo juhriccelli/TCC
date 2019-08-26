@@ -14,7 +14,7 @@
 <body>
   <div class="conteudo" id="ajaxDetalhes">
     <div class="base-flex">
-      <div class="base-mapa">
+      <div class="base-objeto">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 650">
           <g>
             <a class="estados" id="ac">
@@ -130,45 +130,48 @@
       <div class="base-resultado" id="ajaxNormal">
         <div class="base-texto">
           <span>
-            Clique no mapa ao lado ou na bandeira do
-             estado que deseja abaixo para realizar sua busca!!
+            Clique no mapa ou na bandeira do estado que deseja para realizar a busca!
           </span>
         </div>
-        <div class="base-bandeiras" >
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
+        <div class="base-Img" >
+          <div class="linhaImg">
+            <img class="imagem" id="ac" src="../assets/img/estados/ac.jpg" />
+            <img class="imagem" id="al" src="../assets/img/estados/al.jpg" />
+            <img class="imagem" id="am" src="../assets/img/estados/am.jpg" />
+            <img class="imagem" id="ap" src="../assets/img/estados/ap.jpg" />
+            <img class="imagem" id="ba" src="../assets/img/estados/ba.jpg" />
           </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
+          <div class="linhaImg">
+            <img class="imagem" id="ce" src="../assets/img/estados/ce.jpg" />
+            <img class="imagem" id="df" src="../assets/img/estados/df.jpg" />
+            <img class="imagem" id="es" src="../assets/img/estados/es.jpg" />
+            <img class="imagem" id="go" src="../assets/img/estados/go.jpg" />
+            <img class="imagem" id="ma" src="../assets/img/estados/ma.jpg" />
           </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
+          <div class="linhaImg">
+            <img class="imagem" id="mt" src="../assets/img/estados/mt.jpg" />
+            <img class="imagem" id="ms" src="../assets/img/estados/ms.jpg" />
+            <img class="imagem" id="mg" src="../assets/img/estados/mg.jpg" />
+            <img class="imagem" id="pa" src="../assets/img/estados/pa.jpg" />
+            <img class="imagem" id="pb" src="../assets/img/estados/pb.jpg" />
           </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
+          <div class="linhaImg">
+            <img class="imagem" id="pr" src="../assets/img/estados/pr.jpg" />
+            <img class="imagem" id="pe" src="../assets/img/estados/pe.jpg" />
+            <img class="imagem" id="pi" src="../assets/img/estados/pi.jpg" />
+            <img class="imagem" id="rj" src="../assets/img/estados/rj.jpg" />
+            <img class="imagem" id="rn" src="../assets/img/estados/rn.jpg" />
           </div>
-          <div class="linhaBandeiras">
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
-            <img class="bandeiras" id="ac" src="../assets/img/estados/ac.jpg" />
+          <div class="linhaImg">
+            <img class="imagem" id="rs" src="../assets/img/estados/rs.jpg" />
+            <img class="imagem" id="ro" src="../assets/img/estados/ro.jpg" />
+            <img class="imagem" id="rr" src="../assets/img/estados/rr.jpg" />
+            <img class="imagem" id="sc" src="../assets/img/estados/sc.jpg" />
+            <img class="imagem" id="sp" src="../assets/img/estados/sp.jpg" />
+          </div>
+          <div class="linhaImg">
+            <img class="imagem" id="se" src="../assets/img/estados/se.jpg" />
+            <img class="imagem" id="to" src="../assets/img/estados/to.jpg" />
           </div>
 
         </div>
