@@ -8,11 +8,11 @@
 "2008", "2010","2012", "2014","2016", "2018");*/
 
 //Todas as eleições no site do TSE com dados consolidados
-/*$anos = array("1994","1996", "1998","2000", "2002","2004", "2006",
-"2008", "2010","2012", "2014","2016", "2018");*/
+$anos = array("1994","1996", "1998","2000", "2002","2004", "2006",
+"2008", "2010","2012", "2014","2016", "2018");
 
 //Teste para o banco de dados somente com os dados de 2018 do estado de Roraima (estado com menor população)
-$anos = array("2018");
+//$anos = array("2018");
 
 $tamanho = count($anos);
 
