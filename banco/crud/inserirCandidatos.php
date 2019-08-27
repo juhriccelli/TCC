@@ -101,27 +101,44 @@
      $nr_processo = (integer)$dados[57];
 
      //SQL com o Insert pra ser inserido no banco.
-     $sql = "INSERT INTO candidatos (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
-       nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_cargo, ds_cargo,
-       sq_candidato, nr_candidato, nm_candidato, nm_urna_candidato, nm_social_candidato, nr_cpf_candidato, nm_email,
-       cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
-       tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
-       cd_nacionalidade, ds_nacionalidade, sg_uf_nascimento, cd_municipio_nascimento, nm_municipio_nascimento,
-       dt_nascimento, nr_idade_data_posse, nr_titulo_eleitoral_candidato, cd_genero, ds_genero, cd_grau_instrucao,
-       ds_grau_instrucao, cd_estado_civil, ds_estado_civil, cd_cor_raca, ds_cor_raca, cd_ocupacao, ds_ocupacao,
-       nr_despesa_max_campanha, cd_sit_tot_turno, ds_sit_tot_turno, st_reeleicao, st_declarar_bens,
-       nr_protocolo_candidatura, nr_processo)
-       VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao',
-         '$nr_turno', '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf', '$sg_ue',
-         '$nm_ue', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato', '$nm_candidato', '$nm_urna_candidato',
-         '$nm_social_candidato', '$nr_cpf_candidato', '$nm_email', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
-         '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
-         '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_nacionalidade',
-         '$ds_nacionalidade', '$sg_uf_nascimento', '$cd_municipio_nascimento', '$nm_municipio_nascimento',
-         '$dt_nascimento', '$nr_idade_data_posse', '$nr_titulo_eleitoral_candidato', '$cd_genero', '$ds_genero',
-         '$cd_grau_instrucao', '$ds_grau_instrucao', '$cd_estado_civil', '$ds_estado_civil', '$cd_cor_raca',
-         '$ds_cor_raca', '$cd_ocupacao', '$ds_ocupacao', '$nr_despesa_max_campanha', '$cd_sit_tot_turno',
-         '$ds_sit_tot_turno', '$st_reeleicao', '$st_declarar_bens', '$nr_protocolo_candidatura', '$nr_processo')";
+     $sql = "INSERT INTO candidatos (ano_eleicao, nm_tipo_eleicao,
+       nr_turno, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
+       nr_candidato, nm_candidato, nm_urna_candidato,
+       ds_detalhe_situacao_cand,
+       nr_partido, sg_partido, nm_partido,
+       nr_titulo_eleitoral_candidato,
+       ds_sit_tot_turno)
+       VALUES ('$ano_eleicao', '$nm_tipo_eleicao',
+         '$nr_turno', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf',
+         '$nm_ue', '$ds_cargo', '$nr_candidato', '$nm_candidato', '$nm_urna_candidato',
+         '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
+         '$nm_partido',
+         '$nr_titulo_eleitoral_candidato',
+         '$ds_sit_tot_turno')";
+
+         /*SQL com dados desnecessarios para ser inserido no banco
+         $sql = "INSERT INTO candidatos (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
+           nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_cargo, ds_cargo,
+           sq_candidato, nr_candidato, nm_candidato, nm_urna_candidato, nm_social_candidato, nr_cpf_candidato, nm_email,
+           cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
+           tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
+           cd_nacionalidade, ds_nacionalidade, sg_uf_nascimento, cd_municipio_nascimento, nm_municipio_nascimento,
+           dt_nascimento, nr_idade_data_posse, nr_titulo_eleitoral_candidato, cd_genero, ds_genero, cd_grau_instrucao,
+           ds_grau_instrucao, cd_estado_civil, ds_estado_civil, cd_cor_raca, ds_cor_raca, cd_ocupacao, ds_ocupacao,
+           nr_despesa_max_campanha, cd_sit_tot_turno, ds_sit_tot_turno, st_reeleicao, st_declarar_bens,
+           nr_protocolo_candidatura, nr_processo)
+           VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao',
+             '$nr_turno', '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf', '$sg_ue',
+             '$nm_ue', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato', '$nm_candidato', '$nm_urna_candidato',
+             '$nm_social_candidato', '$nr_cpf_candidato', '$nm_email', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
+             '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
+             '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_nacionalidade',
+             '$ds_nacionalidade', '$sg_uf_nascimento', '$cd_municipio_nascimento', '$nm_municipio_nascimento',
+             '$dt_nascimento', '$nr_idade_data_posse', '$nr_titulo_eleitoral_candidato', '$cd_genero', '$ds_genero',
+             '$cd_grau_instrucao', '$ds_grau_instrucao', '$cd_estado_civil', '$ds_estado_civil', '$cd_cor_raca',
+             '$ds_cor_raca', '$cd_ocupacao', '$ds_ocupacao', '$nr_despesa_max_campanha', '$cd_sit_tot_turno',
+             '$ds_sit_tot_turno', '$st_reeleicao', '$st_declarar_bens', '$nr_protocolo_candidatura', '$nr_processo')";
+             */
 
          //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
          if ($conexao->query($sql) === TRUE) {
