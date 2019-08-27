@@ -43,15 +43,30 @@
         $motivo_cancelamento = $dados[18];
 
         //SQL com o Insert pra ser inserido no banco.
-        $sql = "INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
-          sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
-          data_filiacao, situacao_registro, tipo_registro, data_processamento, data_desfiliacao,
-          data_cancelamento, data_regularizacao, motivo_cancelamento)
-          VALUES ('$data_extracao', '$hora_extracao', '$numero_inscricao',
-          '$nome_filiado', '$sigla_partido', '$nome_partido', '$uf', '$codigo_municipio', '$nome_municipio',
-          '$zona_eleitoral', '$secao_eleitoral', '$data_filiacao', '$situacao_registro',
-          '$tipo_registro', '$data_processamento', '$data_desfiliacao',
-          '$data_cancelamento', '$data_regularizacao', '$motivo_cancelamento')";
+        $sql = "INSERT INTO filiados (numero_inscricao, nome_filiado,
+          sigla_partido, nome_partido, uf, nome_municipio,
+          data_filiacao, situacao_registro, tipo_registro, data_desfiliacao,
+          data_cancelamento, motivo_cancelamento)
+          VALUES ('$numero_inscricao',
+          '$nome_filiado', '$sigla_partido', '$nome_partido', '$uf', '$nome_municipio',
+          '$data_filiacao', '$situacao_registro',
+          '$tipo_registro', '$data_desfiliacao',
+          '$data_cancelamento', '$motivo_cancelamento')";
+
+
+          //SQL com o Insert pra ser inserido no banco.
+          /*SQL com os dados desnecessarios para ser inserido no banco
+          $sql = "INSERT INTO filiados (data_extracao, hora_extracao, numero_inscricao, nome_filiado,
+            sigla_partido, nome_partido, uf, codigo_municipio, nome_municipio, zona_eleitoral, secao_eleitoral,
+            data_filiacao, situacao_registro, tipo_registro, data_processamento, data_desfiliacao,
+            data_cancelamento, data_regularizacao, motivo_cancelamento)
+            VALUES ('$data_extracao', '$hora_extracao', '$numero_inscricao',
+            '$nome_filiado', '$sigla_partido', '$nome_partido', '$uf', '$codigo_municipio', '$nome_municipio',
+            '$zona_eleitoral', '$secao_eleitoral', '$data_filiacao', '$situacao_registro',
+            '$tipo_registro', '$data_processamento', '$data_desfiliacao',
+            '$data_cancelamento', '$data_regularizacao', '$motivo_cancelamento')";
+
+            */
 
           //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
           if ($conexao->query($sql) === TRUE) {
