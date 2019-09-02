@@ -81,21 +81,21 @@
      $qt_votos_nominais = (integer) $dados[37];
 
      //SQL com o Insert pra ser inserido no banco.
-     $sql = "INSERT INTO eleicoes (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
-       nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_municipio,
-       nm_municipio, nr_zona, cd_cargo, ds_cargo, sq_candidato, nr_candidato,
-       nm_candidato, nm_urna_candidato, nm_social_candidato,
-       cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
-       tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
-       cd_sit_tot_turno, ds_sit_tot_turno, st_voto_em_transito, qt_votos_nominais)
-       VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao', '$nr_turno',
-         '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf', '$sg_ue', '$nm_ue', '$cd_municipio',
-         '$nm_municipio', '$nr_zona', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato',
+     $sql = "INSERT INTO eleicoes (ano_eleicao,
+       nr_turno, ds_eleicao, sg_uf, nm_ue,
+       nm_municipio, ds_cargo, nr_candidato,
+       nm_candidato, nm_urna_candidato,
+       ds_detalhe_situacao_cand,
+       nr_partido, sg_partido, nm_partido,
+       ds_sit_tot_turno, qt_votos_nominais)
+       VALUES ('$ano_eleicao', '$nr_turno',
+         '$ds_eleicao', '$sg_uf', '$nm_ue',
+         '$nm_municipio', '$ds_cargo', '$nr_candidato',
          '$nm_candidato',
-         '$nm_urna_candidato', '$nm_social_candidato', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
-         '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
-         '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_sit_tot_turno',
-         '$ds_sit_tot_turno', '$st_voto_em_transito', '$qt_votos_nominais')";
+         '$nm_urna_candidato',
+         '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
+         '$nm_partido',
+         '$ds_sit_tot_turno', '$qt_votos_nominais')";
 
          //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
          if ($conexao->query($sql) === TRUE) {
@@ -148,21 +148,21 @@
     $tp_agremiacao = "";
 
     //SQL com o Insert pra ser inserido no banco.
-    $sql = "INSERT INTO eleicoes (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
-      nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_municipio,
-      nm_municipio, nr_zona, cd_cargo, ds_cargo, sq_candidato, nr_candidato,
-      nm_candidato, nm_urna_candidato, nm_social_candidato,
-      cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
-      tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
-      cd_sit_tot_turno, ds_sit_tot_turno, st_voto_em_transito, qt_votos_nominais)
-      VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao', '$nr_turno',
-        '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf', '$sg_ue', '$nm_ue', '$cd_municipio',
-        '$nm_municipio', '$nr_zona', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato',
+    $sql = "INSERT INTO eleicoes (ano_eleicao,
+      nr_turno, ds_eleicao, sg_uf, nm_ue,
+      nm_municipio, ds_cargo, nr_candidato,
+      nm_candidato, nm_urna_candidato,
+      ds_detalhe_situacao_cand,
+      nr_partido, sg_partido, nm_partido,
+      ds_sit_tot_turno, qt_votos_nominais)
+      VALUES ('$ano_eleicao', '$nr_turno',
+        '$ds_eleicao', '$sg_uf', '$nm_ue',
+        '$nm_municipio', '$ds_cargo', '$nr_candidato',
         '$nm_candidato',
-        '$nm_urna_candidato', '$nm_social_candidato', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
-        '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
-        '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_sit_tot_turno',
-        '$ds_sit_tot_turno', '$st_voto_em_transito', '$qt_votos_nominais')";
+        '$nm_urna_candidato',
+        '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
+        '$nm_partido',
+        '$ds_sit_tot_turno', '$qt_votos_nominais')";
 
     //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
     if ($conexao->query($sql) === TRUE) {
@@ -214,21 +214,21 @@
     $tp_agremiacao = "";
 
     //SQL com o Insert pra ser inserido no banco.
-    $sql = "INSERT INTO eleicoes (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
-      nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_municipio,
-      nm_municipio, nr_zona, cd_cargo, ds_cargo, sq_candidato, nr_candidato,
-      nm_candidato, nm_urna_candidato, nm_social_candidato,
-      cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
-      tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
-      cd_sit_tot_turno, ds_sit_tot_turno, st_voto_em_transito, qt_votos_nominais)
-      VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao', '$nr_turno',
-        '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf', '$sg_ue', '$nm_ue', '$cd_municipio',
-        '$nm_municipio', '$nr_zona', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato',
+    $sql = "INSERT INTO eleicoes (ano_eleicao,
+      nr_turno, ds_eleicao, sg_uf, nm_ue,
+      nm_municipio, ds_cargo, nr_candidato,
+      nm_candidato, nm_urna_candidato,
+      ds_detalhe_situacao_cand,
+      nr_partido, sg_partido, nm_partido,
+      ds_sit_tot_turno, qt_votos_nominais)
+      VALUES ('$ano_eleicao', '$nr_turno',
+        '$ds_eleicao', '$sg_uf', '$nm_ue',
+        '$nm_municipio', '$ds_cargo', '$nr_candidato',
         '$nm_candidato',
-        '$nm_urna_candidato', '$nm_social_candidato', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
-        '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
-        '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_sit_tot_turno',
-        '$ds_sit_tot_turno', '$st_voto_em_transito', '$qt_votos_nominais')";
+        '$nm_urna_candidato',
+        '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
+        '$nm_partido',
+        '$ds_sit_tot_turno', '$qt_votos_nominais')";
 
     //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
     if ($conexao->query($sql) === TRUE) {
@@ -238,4 +238,22 @@
     }
   }
 
+
+//SQL completo caso seja necessario
+/*$sql = "INSERT INTO eleicoes (dt_geracao, hh_geracao, ano_eleicao, cd_tipo_eleicao, nm_tipo_eleicao,
+  nr_turno, cd_eleicao, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, sg_ue, nm_ue, cd_municipio,
+  nm_municipio, nr_zona, cd_cargo, ds_cargo, sq_candidato, nr_candidato,
+  nm_candidato, nm_urna_candidato, nm_social_candidato,
+  cd_situacao_candidatura, ds_situacao_candidatura, cd_detalhe_situacao_cand, ds_detalhe_situacao_cand,
+  tp_agremiacao, nr_partido, sg_partido, nm_partido, sq_coligacao, nm_coligacao, ds_composicao_coligacao,
+  cd_sit_tot_turno, ds_sit_tot_turno, st_voto_em_transito, qt_votos_nominais)
+  VALUES ('$dt_geracao', '$hh_geracao', '$ano_eleicao', '$cd_tipo_eleicao', '$nm_tipo_eleicao', '$nr_turno',
+    '$cd_eleicao', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf', '$sg_ue', '$nm_ue', '$cd_municipio',
+    '$nm_municipio', '$nr_zona', '$cd_cargo', '$ds_cargo', '$sq_candidato', '$nr_candidato',
+    '$nm_candidato',
+    '$nm_urna_candidato', '$nm_social_candidato', '$cd_situacao_candidatura', '$ds_situacao_candidatura',
+    '$cd_detalhe_situacao_cand', '$ds_detalhe_situacao_cand', '$tp_agremiacao', '$nr_partido', '$sg_partido',
+    '$nm_partido', '$sq_coligacao', '$nm_coligacao', '$ds_composicao_coligacao', '$cd_sit_tot_turno',
+    '$ds_sit_tot_turno', '$st_voto_em_transito', '$qt_votos_nominais')";
+*/
 ?>
