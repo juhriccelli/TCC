@@ -56,8 +56,15 @@
 }
 
 .linhaImg{
-  width: 100%;
+  height: 100%;
   width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.texto{
+  margin: 2%;
+  width: 90%;
   display: flex;
   align-items: center;
 }

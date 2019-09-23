@@ -11,6 +11,9 @@
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
+<head>
+  <title>CandMap - Seu sistema de fiscaliação eleitoral</title>
+</head>
 <body>
   <div class="conteudo" id="ajaxDetalhes">
     <div class="base-flex">

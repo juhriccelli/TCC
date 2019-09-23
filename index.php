@@ -11,7 +11,31 @@
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
+<head>
+  <title>CandMap - Seu sistema de fiscaliação eleitoral</title>
+</head>
 <body>
+  <div class="conteudo">
+    <div class="texto">
+
+    </div>
+    <div class="base-flex">
+      <div class="base-objeto">
+        <div class="texto">
+          <h1>
+            O QUE É?
+          </h1>
+        </div>
+      </div>
+      <div class="base-resultado">
+        <div class="texto">
+          <h1>
+            COMO FUNCIONA?
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </htm>

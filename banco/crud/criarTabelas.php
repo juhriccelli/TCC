@@ -26,7 +26,6 @@
       nm_tipo_eleicao VARCHAR(1000),
       nr_turno INT(2),
       ds_eleicao VARCHAR(1000),
-      dt_eleicao DATE,
       tp_abrangencia VARCHAR(200),
       sg_uf VARCHAR(2),
       nm_ue VARCHAR(50),

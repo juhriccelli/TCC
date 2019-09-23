@@ -102,14 +102,14 @@
 
      //SQL com o Insert pra ser inserido no banco.
      $sql = "INSERT INTO candidatos (ano_eleicao, nm_tipo_eleicao,
-       nr_turno, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
+       nr_turno, ds_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
        nr_candidato, nm_candidato, nm_urna_candidato,
        ds_detalhe_situacao_cand,
        nr_partido, sg_partido, nm_partido,
        nr_titulo_eleitoral_candidato,
        ds_sit_tot_turno)
        VALUES ('$ano_eleicao', '$nm_tipo_eleicao', '$nr_turno',
-         '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf',
+         '$ds_eleicao', '$tp_abrangencia', '$sg_uf',
          '$nm_ue', '$ds_cargo', '$nr_candidato', '$nm_candidato', '$nm_urna_candidato',
          '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
          '$nm_partido',
@@ -192,14 +192,14 @@
 
      //SQL com o Insert pra ser inserido no banco.
      $sql = "INSERT INTO candidatos (ano_eleicao, nm_tipo_eleicao,
-       nr_turno, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
+       nr_turno, ds_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
        nr_candidato, nm_candidato, nm_urna_candidato,
        ds_detalhe_situacao_cand,
        nr_partido, sg_partido, nm_partido,
        nr_titulo_eleitoral_candidato,
        ds_sit_tot_turno)
-       VALUES ('$ano_eleicao', '$nm_tipo_eleicao',
-         '$nr_turno', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf',
+       VALUES ('$ano_eleicao', '$nm_tipo_eleicao', '$nr_turno',
+         '$ds_eleicao', '$tp_abrangencia', '$sg_uf',
          '$nm_ue', '$ds_cargo', '$nr_candidato', '$nm_candidato', '$nm_urna_candidato',
          '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
          '$nm_partido',
@@ -279,14 +279,14 @@
 
      //SQL com o Insert pra ser inserido no banco.
      $sql = "INSERT INTO candidatos (ano_eleicao, nm_tipo_eleicao,
-       nr_turno, ds_eleicao, dt_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
+       nr_turno, ds_eleicao, tp_abrangencia, sg_uf, nm_ue, ds_cargo,
        nr_candidato, nm_candidato, nm_urna_candidato,
        ds_detalhe_situacao_cand,
        nr_partido, sg_partido, nm_partido,
        nr_titulo_eleitoral_candidato,
        ds_sit_tot_turno)
-       VALUES ('$ano_eleicao', '$nm_tipo_eleicao',
-         '$nr_turno', '$ds_eleicao', '$dt_eleicao', '$tp_abrangencia', '$sg_uf',
+       VALUES ('$ano_eleicao', '$nm_tipo_eleicao', '$nr_turno',
+         '$ds_eleicao', '$tp_abrangencia', '$sg_uf',
          '$nm_ue', '$ds_cargo', '$nr_candidato', '$nm_candidato', '$nm_urna_candidato',
          '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
          '$nm_partido',
