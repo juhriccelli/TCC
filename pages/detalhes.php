@@ -77,7 +77,7 @@
           </thead>
           <tbody>
             <?php
-                foreach ($conexao->query("SELECT * FROM filiados where numero_inscricao like '%$titulo%'") as $linha) {
+                foreach ($conexao->query("SELECT * FROM filiados where numero_inscricao like '%$titulo%' ORDER BY data_filiacao DESC") as $linha) {
                   echo "<td>{$linha['uf']}</td>";
                   echo "<td>{$linha['nome_municipio']}</td>";
                   echo "<td>{$linha['sigla_partido']}</td>";
@@ -115,7 +115,7 @@
           </thead>
           <tbody>
             <?php
-                foreach ($conexao->query("SELECT * FROM candidatos where nr_titulo_eleitoral_candidato like '%$titulo%'") as $linha) {
+                foreach ($conexao->query("SELECT * FROM candidatos where nr_titulo_eleitoral_candidato like '%$titulo%' ORDER BY ano_eleicao DESC") as $linha) {
                   echo "<td>{$linha['ano_eleicao']}</td>";
                   echo "<td>{$linha['nm_urna_candidato']}</td>";
                   echo "<td>{$linha['ds_cargo']}</td>";

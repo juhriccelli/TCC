@@ -14,7 +14,7 @@
       $dados = explode(';', $linha);
 
       $tamD = count($dados);
-      $ano = str_replace("\"", "",$dados[2]);
+      $ano = str_replace("\"", "", $dados[2]);
       $ano = (integer) $ano;
 
       //Retirar aspas do arquivo CSV

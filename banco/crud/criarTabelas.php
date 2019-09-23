@@ -7,7 +7,7 @@
     id INT(10) AUTO_INCREMENT PRIMARY KEY,
     numero_inscricao BIGINT(20),
     nome_filiado VARCHAR(1000),
-    sigla_partido VARCHAR(10),
+    sigla_partido VARCHAR(30),
     nome_partido VARCHAR(100),
     uf VARCHAR(2),
     nome_municipio VARCHAR(1000),
