@@ -4,13 +4,14 @@ $(document).ready(function() {
     var estado = $(this).attr('id');
     buscaPorEstado(estado);
   });
-
-  $(".bandeiras").on('click', function() {
-    var estado = $(this).attr('id');
-    buscaPorEstado(estado);
-  });
 });
 
+$(document).ready(function() {
+  $(".imagem").on('click', function() {
+  var estado = $(this).attr('id');
+  buscaPorEstado(estado);
+});
+});
 
 /*Evento para saber qual pessoa deseja mais detalhes */
 $(function(){
