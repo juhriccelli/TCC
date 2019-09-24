@@ -1,0 +1,17 @@
+
+SELECT candidatos.* , eleicoes.sum(qt_votos_nominais)
+FROM candidatos, eleicoes
+WHERE nm_candidato LIKE "%shéridan%"
+AND candidatos.ano_eleicao = eleicoes.ano_eleicao
+GROUP BY ano_eleicao
+
+
+
+SELECT *
+FROM candidatos
+WHERE nm_candidato LIKE "%shéridan%"
+
+SELECT sum(qt_votos_nominais) AS votos
+FROM eleicoes
+WHERE nm_candidato LIKE "%shéridan%"
+AND ano_eleicao = "2018"
