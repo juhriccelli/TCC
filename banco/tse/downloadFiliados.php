@@ -11,7 +11,6 @@ $estados = array("ac", "al", "ap", "am", "ba", "ce", "df", "es", "go", "ma", "mt
 $partidos = array("avante", "dc", "dem", "mdb", "novo", "patri", "pc_do_b", "pcb", "pco", "pdt", "phs", "pmb", "pmn", "pode", "pp", "ppl",
 "pps", "pr", "prb", "pros", "prp", "prtb", "psb", "psc", "psd", "psdb", "psl", "psol", "pstu", "pt", "ptb", "ptc", "pv", "rede", "solidariedade", );
 
-
 $tamP = count($partidos);
 $tamE = count($estados);
 
