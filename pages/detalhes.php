@@ -115,8 +115,12 @@
           </thead>
           <tbody>
             <?php
-                foreach ($conexao->query("SELECT * FROM candidatos where nr_titulo_eleitoral_candidato
-                  like '%$titulo%' ORDER BY ano_eleicao DESC") as $linha) {
+                foreach ($conexao->query("SELECT candidatos.* , sum(eleicoes.qt_votos_nominais) as votos
+                FROM candidatos, eleicoes
+                WHERE candidatos.nr_titulo_eleitoral_candidato like '%$titulo%'
+                AND candidatos.ano_eleicao = eleicoes.ano_eleicao
+                AND candidatos.nm_candidato = eleicoes.nm_candidato
+                GROUP BY ano_eleicao ORDER BY ano_eleicao DESC") as $linha) {
 
                   echo "<td>{$linha['ano_eleicao']}</td>";
                   echo "<td>{$linha['nm_urna_candidato']}</td>";
@@ -126,13 +130,9 @@
                   echo "<td>{$linha['nm_partido']}</td>";
                   echo "<td>{$linha['nr_candidato']}</td>";
                   echo "<td>{$linha['ds_sit_tot_turno']}</td>";
+                  echo "<td>{$linha['votos']}</td>";
 
-                  $ano = $linha['ano_eleicao'];
-                  $sqlvotos = "SELECT sum(qt_votos_nominais) FROM eleicoes WHERE nr_titulo_eleitoral_candidato LIKE '%$titulo%' AND ano_eleicao LIKE '%$ano%'";
 
-                  $votos = $conexao->query($sqlvotos);
-
-                  echo "<td>$votos</td>";
 
                   echo "</tr>";
                 }
