@@ -8,6 +8,6 @@
   <script src="../assets/js/jquery.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/ajax.js"></script>
+  <title>SCIP-BR: Sistema para Consulta de Informações Partidárias no Brasil </title>
 </head>
-
 </html>

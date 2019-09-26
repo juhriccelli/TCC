@@ -9,8 +9,8 @@
   require_once('../assets/custom.php');
 
 
-  if (isset($_GET["estado"])) {
-    $estado = $_GET["estado"];
+  if (isset($_GET["partido"])) {
+    $partido = $_GET["partido"];
   }
 ?>
 
@@ -29,7 +29,7 @@
       </thead>
       <tbody>
         <?php
-            foreach ($conexao->query("SELECT * FROM filiados where uf like '%$estado%' AND situacao_registro like 'REGULAR'") as $linha) {
+            foreach ($conexao->query("SELECT * FROM filiados where sigla_partido like '%$partido%' AND situacao_registro like 'REGULAR'") as $linha) {
               echo "<tr class='detalhar' data-nome={$linha['numero_inscricao']}>";
               echo "<td>{$linha['nome_filiado']}</td>";
               echo "<td>{$linha['uf']}</td>";

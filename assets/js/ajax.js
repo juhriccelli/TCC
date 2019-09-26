@@ -7,10 +7,18 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $(".imagem").on('click', function() {
-  var estado = $(this).attr('id');
-  buscaPorEstado(estado);
+  $(".imgEstado").on('click', function() {
+    var estado = $(this).attr('id');
+    buscaPorEstado(estado);
+  });
 });
+
+/*Evento para escutar em qual Partido esta clicando */
+$(document).ready(function() {
+  $(".imgPartido").on('click', function() {
+    var partido = $(this).attr('id');
+    buscaPorPartido(partido);
+  });
 });
 
 /*Evento para saber qual pessoa deseja mais detalhes */
@@ -48,9 +56,7 @@ function CriaRequest() {
     return request;
 }
 
-/**
- * Função para enviar os dados
- */
+//Função para enviar os dados de partido
 function buscaPorEstado(estado) {
 
   // Declaração de Variáveis
@@ -80,6 +86,39 @@ function buscaPorEstado(estado) {
   xmlreq.send(null);
 }
 
+
+//Função para enviar os dados de partido
+function buscaPorPartido(partido) {
+
+  // Declaração de Variáveis
+  var result = document.getElementById("ajaxNormal");
+  var xmlreq = CriaRequest();
+
+  // Exibi a imagem de progresso
+  result.innerHTML = '<img src="../assets/img/loading.gif"/>';
+
+  // Iniciar uma requisição
+  xmlreq.open("GET", "../pages/resultadoPartido.php?partido=" + partido, true);
+
+  // Atribui uma função para ser executada sempre que houver uma mudança de ado
+  xmlreq.onreadystatechange = function() {
+
+    // Verifica se foi concluído com sucesso e a conexão fechada (readyState=4)
+    if (xmlreq.readyState == 4) {
+
+      // Verifica se o arquivo foi encontrado com sucesso
+      if (xmlreq.status == 200) {
+        result.innerHTML = xmlreq.responseText;
+      } else {
+        result.innerHTML = "Erro: " + xmlreq.statusText;
+      }
+    }
+  };
+  xmlreq.send(null);
+}
+
+
+//Função para saber mais detalhes do filiado
 function maisDetalhes(titulo) {
 
   // Declaração de Variáveis

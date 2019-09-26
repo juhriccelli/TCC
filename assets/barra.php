@@ -13,7 +13,7 @@
 <html lang="pt-br">
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <span class="navbar-brand">CandMap</span>
+    <span class="navbar-brand">SCIP-BR</span>
 
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto">
