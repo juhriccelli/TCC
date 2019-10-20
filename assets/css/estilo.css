@@ -1,3 +1,18 @@
+/*CSS página inicial*/
+.conteudoIndex{
+  height: 100vh;
+  width: 100vw;
+  padding-top: 60px;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.imagemCapa{
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/capa.png");
+}
+
 /*CSS com configuração do SVG */
 .estados:hover{
   cursor: pointer;

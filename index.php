@@ -12,10 +12,11 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <body>
-  <div class="conteudo">
-    <div class="texto">
-      <p>TESTE</p>
-      <p>TESTE</p>
+  <div class="conteudoIndex">
+    <div class="imagemCapa">
+
+    </div>
+    <div class="textoCapa">
     </div>
   </div>
 </body>
