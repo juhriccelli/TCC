@@ -1,19 +1,44 @@
-/*CSS página inicial*/
-.conteudoIndex{
+.conteudo{
   height: 100vh;
-  width: 100vw;
   padding-top: 60px;
   padding-bottom: 5px;
+}
+
+.base-flex{
+  height: 100%;
+  width: 100%;
   display: flex;
 }
 
-.imagemCapa{
+.base-objeto{
+  width: 45%;
   height: 100%;
-  width: 100%;
-  background-image: url("../img/capa.png");
+  align-items: center;
+  position: relative;
+
 }
 
-/*CSS com configuração do SVG */
+.base-resultado{
+  width: 55%;
+  height: 100%;
+  overflow: auto;
+  align: center;
+}
+
+.base-tabela{
+  overflow: auto;
+}
+
+.topo-detalhes{
+  width: 100%;
+}
+
+.base-detalhes{
+  margin-top: 2%;
+  width: 100%;
+  display: block;
+}
+
 .estados:hover{
   cursor: pointer;
 }
@@ -30,6 +55,27 @@
   fill: orange;
 }
 
+.linhaImg{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.texto{
+  margin: 2%;
+  width: 90%;
+  display: flex;
+  align-content: center;
+}
+
+.imagem{
+  width: 15%;
+  height: 15%;
+  cursor: pointer;
+  margin: 2%;
+}
+
 svg {
     position: absolute;
     top: 0;
@@ -40,123 +86,3 @@ svg {
     max-width: 100%;
     max-height: 100%;
 }
-
-/*--------------------------------------------------------------*/
-
-
-/*CSS Busca por Estado*/
-.conteudoEstado{
-  height: 100vh;
-  width: 100vw;
-  padding-top: 60px;
-  padding-bottom: 5px;
-  display: flex;
-}
-
-.objetoEstado{
-  width: 45%;
-  height: 100%;
-  align-items: center;
-  position: relative;
-}
-
-.resultadoEstado{
-  width: 55%;
-  height: 100%;
-  overflow: auto;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.textoEstado{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.imgEstado{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.bandeira{
-  width: 12%;
-  height: 12%;
-  cursor: pointer;
-  margin: 2%;
-}
-/*--------------------------------------------------------------*/
-
-/*CSS Busca por Partido*/
-.conteudoPartido{
-  height: 100vh;
-  width: 100vw;
-  padding-top: 60px;
-  padding-bottom: 5px;
-  display: flex;
-}
-
-.objetoPartido{
-  width: 45%;
-  height: 100%;
-  align-items: center;
-  position: relative;
-}
-
-.resultadoPartido{
-  width: 55%;
-  height: 100%;
-  overflow: auto;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.textoPartido{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.imgPartido{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.partido{
-  width: 10%;
-  height: 10%;
-  cursor: pointer;
-  margin: 2%;
-}
-/*--------------------------------------------------------------*/
-
-
-
-/*CSS pagina de Detalhes*/
-.conteudoDetalhes{
-  display: block;
-  width: 100vw;
-}
-
-.topo-detalhes{
-  width: 100%;
-}
-
-.base-detalhes{
-  margin-top: 2%;
-  width: 100%;
-  display: block;
-}
-
-.base-tabela{
-  overflow: auto;
-}
-/*--------------------------------------------------------------*/
