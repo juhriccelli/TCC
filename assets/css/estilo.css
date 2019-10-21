@@ -1,4 +1,4 @@
-/*CSS página inicial*/
+/* CSS página inicial */
 .conteudoIndex{
   height: 100vh;
   overflow: hidden;
@@ -76,7 +76,7 @@
 
 /*-----------------------------------------------------------------*/
 
-/*CSS configurando o SVG*/
+/* CSS configurando o SVG */
 svg {
     position: absolute;
     top: 0;
@@ -106,7 +106,7 @@ svg {
 
 /*-----------------------------------------------------------------*/
 
-/*CSS Buscar por Estado*/
+/* CSS Buscar por Estado */
 .conteudo{
   height: 100vh;
   padding-top: 60px;
@@ -114,6 +114,10 @@ svg {
 }
 
 /*-----------------------------------------------------------------*/
+
+.base-texto{
+  text-align: center;
+}
 
 .base-flex{
   height: 100%;

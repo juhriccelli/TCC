@@ -69,153 +69,183 @@
         <div class="base-texto">
           <span>
             Clique no logo ou na tabela com o partido desejado
-             para realizar a busca!
-          </span>
-
-          <table style="width: 90%;" border="2px">
+            para realizar a busca!</span>
+          <table class="table table-striped" style="width: 90%;">
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>10 - REP<br />
-                  Republicanos
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>11 - PP<br />
-                  Progressistas
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>12 - PDT<br />
-                  Partido Democrático Trabalhista
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>13 - PT<br />
-                  Partido dos Trabalhadores
-                </p></td>
+              <td id="prb" style="width: 25%; text-align: center;">
+                <p>10 - REP
+                  <!-- Republicanos --><br />
+                </p>
+              </td>
+              <td id="pp" style="width: 25%; text-align: center;">
+                <p>11 - PP
+                  <!-- <br /> Progressistas -->
+                </p>
+              </td>
+              <td id="pdt" style="width: 25%; text-align: center;">
+                <p>12 - PDT
+                  <!-- <br /> Partido Democrático Trabalhista -->
+                </p>
+              </td>
+              <td id="pt" style="width: 25%; text-align: center;">
+                <p>13 - PT
+                  <!-- <br /> Partido dos Trabalhadores -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>14 - PTB<br />
-                  Partido Trabalhista Brasileiro
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>15 - MDB<br />
-                  Movimento Democrático Brasileiro
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>16 - PSTU<br />
-                  Partido Socialista dos Trabalhadores Unificado
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>17 - PSL<br />
-                  Partido Social Liberal
-                </p></td>
+              <td id="ptb" style="width: 25%; text-align: center;">
+                <p>14 - PTB
+                  <!-- <br /> Partido Trabalhista Brasileiro -->
+                </p>
+              </td>
+              <td id="mdb" style="width: 25%; text-align: center;">
+                <p>15 - MDB
+                  <!-- <br /> Movimento Democrático Brasileiro -->
+                </p>
+              </td>
+              <td id="pstu" style="width: 25%; text-align: center;">
+                <p>16 - PSTU
+                  <!-- <br /> Partido Socialista dos Trabalhadores Unificado -->
+                </p>
+              </td>
+              <td id="psl" style="width: 25%; text-align: center;">
+                <p>17 - PSL
+                  <!-- <br /> Partido Social Liberal -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>18 - REDE<br />
-                  Rede Sustentabilidade
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>19 - PODE<br />
-                  Podemos
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>20 - PSC<br />
-                  Partido Social Cristão
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>21 - PCB<br />
-                  Partido Comunista Brasileiro
-                </p></td>
+              <td id="rede" style="width: 25%; text-align: center;">
+                <p>18 - REDE
+                  <!-- <br /> Rede Sustentabilidade -->
+                </p>
+              </td>
+              <td id="podemos" style="width: 25%; text-align: center;">
+                <p>19 - PODE
+                  <!-- <br /> Podemos -->
+                </p>
+              </td>
+              <td id="psc" style="width: 25%; text-align: center;">
+                <p>20 - PSC
+                  <!-- <br /> Partido Social Cristão -->
+                </p>
+              </td>
+              <td id="pcb" style="width: 25%; text-align: center;">
+                <p>21 - PCB
+                  <!-- <br /> Partido Comunista Brasileiro -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>22 - PL<br />
-                  Partido Liberal
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>23 - CDN<br />
-                  Cidadania
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>25 - DEM<br />
-                  Democratas
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>27 - DC<br />
-                  Democracia Cristã
-                </p></td>
+              <td id="pl" style="width: 25%; text-align: center;">
+                <p>22 - PL
+                  <!-- <br /> Partido Liberal -->
+                </p>
+              </td>
+              <td id="pps" style="width: 25%; text-align: center;">
+                <p>23 - CDN
+                  <!-- <br /> Cidadania -->
+                </p>
+              </td>
+              <td id="dem" style="width: 25%; text-align: center;">
+                <p>25 - DEM
+                  <!-- <br /> Democratas -->
+                </p>
+              </td>
+              <td id="dc" style="width: 25%; text-align: center;">
+                <p>27 - DC
+                  <!-- <br /> Democracia Cristã -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>28 - PRTB<br />
-                  Partido Renovador Trabalhista Brasileiro
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>29 - PCO<br />
-                  Partido da Causa Operária
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>30 - NOVO<br />
-                  Partido Novo
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>33 - PMN<br />
-                  Partido da Mobilização Nacional
-                </p></td>
+              <td id="prtb" style="width: 25%; text-align: center;">
+                <p>28 - PRTB
+                  <!-- <br /> Partido Renovador Trabalhista Brasileiro -->
+                </p>
+              </td>
+              <td id="pco" style="width: 25%; text-align: center;">
+                <p>29 - PCO
+                  <!-- <br /> Partido da Causa Operária -->
+                </p>
+              </td>
+              <td id="novo" style="width: 25%; text-align: center;">
+                <p>30 - NOVO
+                  <!-- <br /> Partido Novo -->
+                </p>
+              </td>
+              <td id="pmn" style="width: 25%; text-align: center;">
+                <p>33 - PMN
+                  <!-- <br /> Partido da Mobilização Nacional -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>35 - PMB<br />
-                  Partido da Mulher Brasileira
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>36 - PTC<br />
-                  Partido Trabalhista Cristão
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>40 - PSB<br />
-                  Partido Socialista Brasileiro
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>43 - PV<br />
-                  Partido Verde
-                </p></td>
+              <td id="pmb" style="width: 25%; text-align: center;">
+                <p>35 - PMB
+                  <!-- <br /> Partido da Mulher Brasileira -->
+                </p>
+              </td>
+              <td id="ptc" style="width: 25%; text-align: center;">
+                <p>36 - PTC
+                  <!-- <br /> Partido Trabalhista Cristão -->
+                </p>
+              </td>
+              <td id="psb" style="width: 25%; text-align: center;">
+                <p>40 - PSB
+                  <!-- <br /> Partido Socialista Brasileiro -->
+                </p>
+              </td>
+              <td id="pv" style="width: 25%; text-align: center;">
+                <p>43 - PV
+                  <!-- <br /> Partido Verde -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>45 - PSDB<br />
-                  Partido da Social Democracia Brasileira
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>50 - PSOL<br />
-                  Partido Socialismo e Liberdade
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>51 - PATRIOTA<br />
-                  Patriota
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>55 - PSD<br />
-                  Partido Social Democrático
-                </p></td>
+              <td id="psdb" style="width: 25%; text-align: center;">
+                <p>45 - PSDB
+                  <!-- <br /> Partido da Social Democracia Brasileira -->
+                </p>
+              </td>
+              <td id="psol" style="width: 25%; text-align: center;">
+                <p>50 - PSOL
+                  <!-- <br /> Partido Socialismo e Liberdade -->
+                </p>
+              </td>
+              <td id="patriota" style="width: 25%; text-align: center;">
+                <p>51 - PATRIOTA
+                  <!-- <br /> Patriota -->
+                </p>
+              </td>
+              <td id="psd" style="width: 25%; text-align: center;">
+                <p>55 - PSD
+                  <!-- <br /> Partido Social Democrático -->
+                </p>
+              </td>
             </tr>
             <tr>
-              <td style="width: 25%; text-align: center;">
-                <p>65 - PCdoB<br />
-                  Partido Comunista do Brasil
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>70 - AVANTE<br />
-                  Avante
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>77 - SD<br />
-                  Solidariedade
-                </p></td>
-              <td style="width: 25%; text-align: center;">
-                <p>90 - PROS<br />
-                  Partido Republicano da Ordem Social
-                </p></td>
+              <td id="pcdob" style="width: 25%; text-align: center;">
+                <p>65 - PCdoB
+                  <!-- <br /> Partido Comunista do Brasil -->
+                </p>
+              </td>
+              <td id="avante" style="width: 25%; text-align: center;">
+                <p>70 - AVANTE
+                  <!-- <br /> Avante -->
+                </p>
+              </td>
+              <td id="sd" style="width: 25%; text-align: center;">
+                <p>77 - SD
+                  <!-- <br /> Solidariedade -->
+                </p>
+              </td>
+              <td id="pros" style="width: 25%; text-align: center;">
+                <p>90 - PROS
+                  <!-- <br /> Partido Republicano da Ordem Social -->
+                </p>
+              </td>
             </tr>
           </table>
         </div>
@@ -223,5 +253,4 @@
     </div>
   </div>
 </body>
-
 </html>
