@@ -11,9 +11,6 @@
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
-<head>
-  <title>CandMap - Seu sistema de fiscaliação eleitoral</title>
-</head>
 <body>
   <div class="conteudo" id="ajaxDetalhes">
     <div class="base-flex">
@@ -176,7 +173,6 @@
             <img class="imagem" id="se" src="../assets/img/estados/se.jpg" />
             <img class="imagem" id="to" src="../assets/img/estados/to.jpg" />
           </div>
-
         </div>
       </div>
     </div>
