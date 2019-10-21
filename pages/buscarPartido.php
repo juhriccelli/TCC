@@ -18,50 +18,50 @@
       <div class="base-objeto">
         <div class="base-Img">
           <div class="linhaImg">
-            <img class="imagem" id="avante" src="../assets/img/partidos/avante.png" />
-            <img class="imagem" id="dc" src="../assets/img/partidos/dc.png" />
-            <img class="imagem" id="dem" src="../assets/img/partidos/dem.png" />
-            <img class="imagem" id="mdb" src="../assets/img/partidos/mdb.png" />
-            <img class="imagem" id="novo" src="../assets/img/partidos/novo.png" />
+            <img class="imagem imgPartido" id="avante" src="../assets/img/partidos/avante.png" />
+            <img class="imagem imgPartido" id="dc" src="../assets/img/partidos/dc.png" />
+            <img class="imagem imgPartido" id="dem" src="../assets/img/partidos/dem.png" />
+            <img class="imagem imgPartido" id="mdb" src="../assets/img/partidos/mdb.png" />
+            <img class="imagem imgPartido" id="novo" src="../assets/img/partidos/novo.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem" id="patriota" src="../assets/img/partidos/patriota.png" />
-            <img class="imagem" id="pcb" src="../assets/img/partidos/pcb.png" />
-            <img class="imagem" id="pcdob" src="../assets/img/partidos/pcdob.png" />
-            <img class="imagem" id="pco" src="../assets/img/partidos/pco.png" />
-            <img class="imagem" id="pdt" src="../assets/img/partidos/pdt.png" />
+            <img class="imagem imgPartido" id="patriota" src="../assets/img/partidos/patriota.png" />
+            <img class="imagem imgPartido" id="pcb" src="../assets/img/partidos/pcb.png" />
+            <img class="imagem imgPartido" id="pcdob" src="../assets/img/partidos/pcdob.png" />
+            <img class="imagem imgPartido" id="pco" src="../assets/img/partidos/pco.png" />
+            <img class="imagem imgPartido" id="pdt" src="../assets/img/partidos/pdt.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem" id="pl" src="../assets/img/partidos/pl.png" />
-            <img class="imagem" id="pmb" src="../assets/img/partidos/pmb.png" />
-            <img class="imagem" id="pmn" src="../assets/img/partidos/pmn.png" />
-            <img class="imagem" id="podemos" src="../assets/img/partidos/podemos.png" />
-            <img class="imagem" id="pp" src="../assets/img/partidos/pp.png" />
+            <img class="imagem imgPartido" id="pl" src="../assets/img/partidos/pl.png" />
+            <img class="imagem imgPartido" id="pmb" src="../assets/img/partidos/pmb.png" />
+            <img class="imagem imgPartido" id="pmn" src="../assets/img/partidos/pmn.png" />
+            <img class="imagem imgPartido" id="podemos" src="../assets/img/partidos/podemos.png" />
+            <img class="imagem imgPartido" id="pp" src="../assets/img/partidos/pp.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem" id="pps" src="../assets/img/partidos/pps.png" />
-            <img class="imagem" id="prb" src="../assets/img/partidos/prb.png" />
-            <img class="imagem" id="pros" src="../assets/img/partidos/pros.png" />
-            <img class="imagem" id="prtb" src="../assets/img/partidos/prtb.png" />
-            <img class="imagem" id="psb" src="../assets/img/partidos/psb.png" />
+            <img class="imagem imgPartido" id="pps" src="../assets/img/partidos/pps.png" />
+            <img class="imagem imgPartido" id="prb" src="../assets/img/partidos/prb.png" />
+            <img class="imagem imgPartido" id="pros" src="../assets/img/partidos/pros.png" />
+            <img class="imagem imgPartido" id="prtb" src="../assets/img/partidos/prtb.png" />
+            <img class="imagem imgPartido" id="psb" src="../assets/img/partidos/psb.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem" id="psc" src="../assets/img/partidos/psc.png" />
-            <img class="imagem" id="psd" src="../assets/img/partidos/psd.png" />
-            <img class="imagem" id="psdb" src="../assets/img/partidos/psdb.png" />
-            <img class="imagem" id="psl" src="../assets/img/partidos/psl.png" />
-            <img class="imagem" id="psol" src="../assets/img/partidos/psol.png" />
+            <img class="imagem imgPartido" id="psc" src="../assets/img/partidos/psc.png" />
+            <img class="imagem imgPartido" id="psd" src="../assets/img/partidos/psd.png" />
+            <img class="imagem imgPartido" id="psdb" src="../assets/img/partidos/psdb.png" />
+            <img class="imagem imgPartido" id="psl" src="../assets/img/partidos/psl.png" />
+            <img class="imagem imgPartido" id="psol" src="../assets/img/partidos/psol.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem" id="pstu" src="../assets/img/partidos/pstu.png" />
-            <img class="imagem" id="pt" src="../assets/img/partidos/pt.png" />
-            <img class="imagem" id="ptb" src="../assets/img/partidos/ptb.png" />
-            <img class="imagem" id="ptc" src="../assets/img/partidos/ptc.png" />
-            <img class="imagem" id="pv" src="../assets/img/partidos/pv.png" />
+            <img class="imagem imgPartido" id="pstu" src="../assets/img/partidos/pstu.png" />
+            <img class="imagem imgPartido" id="pt" src="../assets/img/partidos/pt.png" />
+            <img class="imagem imgPartido" id="ptb" src="../assets/img/partidos/ptb.png" />
+            <img class="imagem imgPartido" id="ptc" src="../assets/img/partidos/ptc.png" />
+            <img class="imagem imgPartido" id="pv" src="../assets/img/partidos/pv.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem" id="rede" src="../assets/img/partidos/rede.png" />
-            <img class="imagem" id="sd" src="../assets/img/partidos/sd.png" />
+            <img class="imagem imgPartido" id="rede" src="../assets/img/partidos/rede.png" />
+            <img class="imagem imgPartido" id="sd" src="../assets/img/partidos/sd.png" />
           </div>
         </div>
       </div>
@@ -72,176 +72,176 @@
             para realizar a busca!</span>
           <table class="table table-striped" style="width: 90%;">
             <tr>
-              <td id="prb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="prb" style="width: 25%; text-align: center;">
                 <p>10 - REP
                   <!-- Republicanos --><br />
                 </p>
               </td>
-              <td id="pp" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pp" style="width: 25%; text-align: center;">
                 <p>11 - PP
                   <!-- <br /> Progressistas -->
                 </p>
               </td>
-              <td id="pdt" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pdt" style="width: 25%; text-align: center;">
                 <p>12 - PDT
                   <!-- <br /> Partido Democrático Trabalhista -->
                 </p>
               </td>
-              <td id="pt" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pt" style="width: 25%; text-align: center;">
                 <p>13 - PT
                   <!-- <br /> Partido dos Trabalhadores -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="ptb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="ptb" style="width: 25%; text-align: center;">
                 <p>14 - PTB
                   <!-- <br /> Partido Trabalhista Brasileiro -->
                 </p>
               </td>
-              <td id="mdb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="mdb" style="width: 25%; text-align: center;">
                 <p>15 - MDB
                   <!-- <br /> Movimento Democrático Brasileiro -->
                 </p>
               </td>
-              <td id="pstu" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pstu" style="width: 25%; text-align: center;">
                 <p>16 - PSTU
                   <!-- <br /> Partido Socialista dos Trabalhadores Unificado -->
                 </p>
               </td>
-              <td id="psl" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="psl" style="width: 25%; text-align: center;">
                 <p>17 - PSL
                   <!-- <br /> Partido Social Liberal -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="rede" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="rede" style="width: 25%; text-align: center;">
                 <p>18 - REDE
                   <!-- <br /> Rede Sustentabilidade -->
                 </p>
               </td>
-              <td id="podemos" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="podemos" style="width: 25%; text-align: center;">
                 <p>19 - PODE
                   <!-- <br /> Podemos -->
                 </p>
               </td>
-              <td id="psc" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="psc" style="width: 25%; text-align: center;">
                 <p>20 - PSC
                   <!-- <br /> Partido Social Cristão -->
                 </p>
               </td>
-              <td id="pcb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pcb" style="width: 25%; text-align: center;">
                 <p>21 - PCB
                   <!-- <br /> Partido Comunista Brasileiro -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="pl" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pl" style="width: 25%; text-align: center;">
                 <p>22 - PL
                   <!-- <br /> Partido Liberal -->
                 </p>
               </td>
-              <td id="pps" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pps" style="width: 25%; text-align: center;">
                 <p>23 - CDN
                   <!-- <br /> Cidadania -->
                 </p>
               </td>
-              <td id="dem" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="dem" style="width: 25%; text-align: center;">
                 <p>25 - DEM
                   <!-- <br /> Democratas -->
                 </p>
               </td>
-              <td id="dc" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="dc" style="width: 25%; text-align: center;">
                 <p>27 - DC
                   <!-- <br /> Democracia Cristã -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="prtb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="prtb" style="width: 25%; text-align: center;">
                 <p>28 - PRTB
                   <!-- <br /> Partido Renovador Trabalhista Brasileiro -->
                 </p>
               </td>
-              <td id="pco" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pco" style="width: 25%; text-align: center;">
                 <p>29 - PCO
                   <!-- <br /> Partido da Causa Operária -->
                 </p>
               </td>
-              <td id="novo" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="novo" style="width: 25%; text-align: center;">
                 <p>30 - NOVO
                   <!-- <br /> Partido Novo -->
                 </p>
               </td>
-              <td id="pmn" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pmn" style="width: 25%; text-align: center;">
                 <p>33 - PMN
                   <!-- <br /> Partido da Mobilização Nacional -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="pmb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pmb" style="width: 25%; text-align: center;">
                 <p>35 - PMB
                   <!-- <br /> Partido da Mulher Brasileira -->
                 </p>
               </td>
-              <td id="ptc" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="ptc" style="width: 25%; text-align: center;">
                 <p>36 - PTC
                   <!-- <br /> Partido Trabalhista Cristão -->
                 </p>
               </td>
-              <td id="psb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="psb" style="width: 25%; text-align: center;">
                 <p>40 - PSB
                   <!-- <br /> Partido Socialista Brasileiro -->
                 </p>
               </td>
-              <td id="pv" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pv" style="width: 25%; text-align: center;">
                 <p>43 - PV
                   <!-- <br /> Partido Verde -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="psdb" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="psdb" style="width: 25%; text-align: center;">
                 <p>45 - PSDB
                   <!-- <br /> Partido da Social Democracia Brasileira -->
                 </p>
               </td>
-              <td id="psol" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="psol" style="width: 25%; text-align: center;">
                 <p>50 - PSOL
                   <!-- <br /> Partido Socialismo e Liberdade -->
                 </p>
               </td>
-              <td id="patriota" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="patriota" style="width: 25%; text-align: center;">
                 <p>51 - PATRIOTA
                   <!-- <br /> Patriota -->
                 </p>
               </td>
-              <td id="psd" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="psd" style="width: 25%; text-align: center;">
                 <p>55 - PSD
                   <!-- <br /> Partido Social Democrático -->
                 </p>
               </td>
             </tr>
             <tr>
-              <td id="pcdob" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pcdob" style="width: 25%; text-align: center;">
                 <p>65 - PCdoB
                   <!-- <br /> Partido Comunista do Brasil -->
                 </p>
               </td>
-              <td id="avante" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="avante" style="width: 25%; text-align: center;">
                 <p>70 - AVANTE
                   <!-- <br /> Avante -->
                 </p>
               </td>
-              <td id="sd" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="sd" style="width: 25%; text-align: center;">
                 <p>77 - SD
                   <!-- <br /> Solidariedade -->
                 </p>
               </td>
-              <td id="pros" style="width: 25%; text-align: center;">
+              <td class="imgPartido" id="pros" style="width: 25%; text-align: center;">
                 <p>90 - PROS
                   <!-- <br /> Partido Republicano da Ordem Social -->
                 </p>

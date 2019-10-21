@@ -26,10 +26,12 @@
         <li class="nav-item">
           <a class="nav-link" href="../pages/buscarPartido.php">Busca por Partido</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../pages/buscarNome.php">Busca por Nome</a>
-        </li>
       </ul>
+      <form action="../pages/buscarNome.php" method="post" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" name="nome" placeholder="Busca por Nome" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+
     </div>
   </nav>
 </body>

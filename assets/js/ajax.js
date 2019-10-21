@@ -21,6 +21,8 @@ $(document).ready(function() {
   });
 });
 
+
+
 /*Evento para saber qual pessoa deseja mais detalhes */
 $(function(){
     $(document).on('click', '.detalhar', function(e) {
