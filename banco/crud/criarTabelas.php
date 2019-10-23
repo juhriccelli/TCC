@@ -46,19 +46,7 @@
       id INT(10) AUTO_INCREMENT PRIMARY KEY,
       ano_eleicao INT(4),
       nr_turno INT(2),
-      ds_eleicao VARCHAR(1000),
-      sg_uf VARCHAR(2),
-      nm_ue VARCHAR(50),
-      nm_municipio VARCHAR(1000),
-      ds_cargo VARCHAR(1000),
-      nr_candidato BIGINT(100),
       nm_candidato VARCHAR(1000),
-      nm_urna_candidato VARCHAR(1000),
-      ds_detalhe_situacao_cand VARCHAR(50),
-      nr_partido INT(5),
-      sg_partido VARCHAR(50),
-      nm_partido VARCHAR(1000),
-      ds_sit_tot_turno VARCHAR(500),
       qt_votos_nominais BIGINT(20));
       ";
 
