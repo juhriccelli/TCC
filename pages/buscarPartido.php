@@ -22,24 +22,27 @@
             <img class="imagem imgPartido" id="cidadania" src="../assets/img/partidos/cidadania.png" />
             <img class="imagem imgPartido" id="dc" src="../assets/img/partidos/dc.png" />
             <img class="imagem imgPartido" id="dem" src="../assets/img/partidos/dem.png" />
-            <img class="imagem imgPartido" id="mdb" src="../assets/img/partidos/mdb.png" />
+
           </div>
           <div class="linhaImg">
+            <img class="imagem imgPartido" id="mdb" src="../assets/img/partidos/mdb.png" />
             <img class="imagem imgPartido" id="novo" src="../assets/img/partidos/novo.png" />
             <img class="imagem imgPartido" id="patriota" src="../assets/img/partidos/patriota.png" />
             <img class="imagem imgPartido" id="pcb" src="../assets/img/partidos/pcb.png" />
-            <img class="imagem imgPartido" id="pcdob" src="../assets/img/partidos/pcdob.png" />
-            <img class="imagem imgPartido" id="pco" src="../assets/img/partidos/pco.png" />
           </div>
           <div class="linhaImg">
+            <img class="imagem imgPartido" id="pcdob" src="../assets/img/partidos/pcdob.png" />
+            <img class="imagem imgPartido" id="pco" src="../assets/img/partidos/pco.png" />
             <img class="imagem imgPartido" id="pdt" src="../assets/img/partidos/pdt.png" />
             <img class="imagem imgPartido" id="pl" src="../assets/img/partidos/pl.png" />
+          </div>
+          <div class="linhaImg">
             <img class="imagem imgPartido" id="pmb" src="../assets/img/partidos/pmb.png" />
             <img class="imagem imgPartido" id="pmn" src="../assets/img/partidos/pmn.png" />
             <img class="imagem imgPartido" id="pode" src="../assets/img/partidos/podemos.png" />
+            <img class="imagem imgPartido" id="pp" src="../assets/img/partidos/pp.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem imgPartido" id="pp" src="../assets/img/partidos/pp.png" />
             <img class="imagem imgPartido" id="pros" src="../assets/img/partidos/pros.png" />
             <img class="imagem imgPartido" id="prtb" src="../assets/img/partidos/prtb.png" />
             <img class="imagem imgPartido" id="psb" src="../assets/img/partidos/psb.png" />
@@ -50,16 +53,16 @@
             <img class="imagem imgPartido" id="psdb" src="../assets/img/partidos/psdb.png" />
             <img class="imagem imgPartido" id="psl" src="../assets/img/partidos/psl.png" />
             <img class="imagem imgPartido" id="psol" src="../assets/img/partidos/psol.png" />
-            <img class="imagem imgPartido" id="pstu" src="../assets/img/partidos/pstu.png" />
           </div>
           <div class="linhaImg">
+            <img class="imagem imgPartido" id="pstu" src="../assets/img/partidos/pstu.png" />
             <img class="imagem imgPartido" id="pt" src="../assets/img/partidos/pt.png" />
             <img class="imagem imgPartido" id="ptb" src="../assets/img/partidos/ptb.png" />
             <img class="imagem imgPartido" id="ptc" src="../assets/img/partidos/ptc.png" />
-            <img class="imagem imgPartido" id="pv" src="../assets/img/partidos/pv.png" />
-            <img class="imagem imgPartido" id="rede" src="../assets/img/partidos/rede.png" />
           </div>
           <div class="linhaImg">
+            <img class="imagem imgPartido" id="pv" src="../assets/img/partidos/pv.png" />
+            <img class="imagem imgPartido" id="rede" src="../assets/img/partidos/rede.png" />
             <img class="imagem imgPartido" id="republicanos" src="../assets/img/partidos/republicanos.png" />
             <img class="imagem imgPartido" id="Solidariedade" src="../assets/img/partidos/solidariedade.png" />
           </div>
@@ -73,11 +76,7 @@
           <table class="table table-striped" style="width: 90%;">
             <tr>
               <td class="imgPartido" id="republicanos" style="width: 25%; text-align: center;">
-<<<<<<< HEAD
-                <p>10 - REPUBLICANOS
-=======
                 <p>10 - REP
->>>>>>> f73999b04f633b11b66cd5d5d212e557eda5165b
                   <!-- Republicanos --><br />
                 </p>
               </td>
@@ -241,7 +240,7 @@
                 </p>
               </td>
               <td class="imgPartido" id="solidariedade" style="width: 25%; text-align: center;">
-                <p>77 - SOLIDARIEDADE
+                <p>77 - SD
                   <!-- <br /> Solidariedade -->
                 </p>
               </td>
