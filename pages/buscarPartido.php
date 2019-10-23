@@ -19,49 +19,49 @@
         <div class="base-Img">
           <div class="linhaImg">
             <img class="imagem imgPartido" id="avante" src="../assets/img/partidos/avante.png" />
+            <img class="imagem imgPartido" id="cidadania" src="../assets/img/partidos/cidadania.png" />
             <img class="imagem imgPartido" id="dc" src="../assets/img/partidos/dc.png" />
             <img class="imagem imgPartido" id="dem" src="../assets/img/partidos/dem.png" />
             <img class="imagem imgPartido" id="mdb" src="../assets/img/partidos/mdb.png" />
-            <img class="imagem imgPartido" id="novo" src="../assets/img/partidos/novo.png" />
           </div>
           <div class="linhaImg">
+            <img class="imagem imgPartido" id="novo" src="../assets/img/partidos/novo.png" />
             <img class="imagem imgPartido" id="patriota" src="../assets/img/partidos/patriota.png" />
             <img class="imagem imgPartido" id="pcb" src="../assets/img/partidos/pcb.png" />
             <img class="imagem imgPartido" id="pcdob" src="../assets/img/partidos/pcdob.png" />
             <img class="imagem imgPartido" id="pco" src="../assets/img/partidos/pco.png" />
-            <img class="imagem imgPartido" id="pdt" src="../assets/img/partidos/pdt.png" />
           </div>
           <div class="linhaImg">
+            <img class="imagem imgPartido" id="pdt" src="../assets/img/partidos/pdt.png" />
             <img class="imagem imgPartido" id="pl" src="../assets/img/partidos/pl.png" />
             <img class="imagem imgPartido" id="pmb" src="../assets/img/partidos/pmb.png" />
             <img class="imagem imgPartido" id="pmn" src="../assets/img/partidos/pmn.png" />
-            <img class="imagem imgPartido" id="podemos" src="../assets/img/partidos/podemos.png" />
-            <img class="imagem imgPartido" id="pp" src="../assets/img/partidos/pp.png" />
+            <img class="imagem imgPartido" id="pode" src="../assets/img/partidos/podemos.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem imgPartido" id="pps" src="../assets/img/partidos/pps.png" />
-            <img class="imagem imgPartido" id="prb" src="../assets/img/partidos/prb.png" />
+            <img class="imagem imgPartido" id="pp" src="../assets/img/partidos/pp.png" />
             <img class="imagem imgPartido" id="pros" src="../assets/img/partidos/pros.png" />
             <img class="imagem imgPartido" id="prtb" src="../assets/img/partidos/prtb.png" />
             <img class="imagem imgPartido" id="psb" src="../assets/img/partidos/psb.png" />
+            <img class="imagem imgPartido" id="psc" src="../assets/img/partidos/psc.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem imgPartido" id="psc" src="../assets/img/partidos/psc.png" />
             <img class="imagem imgPartido" id="psd" src="../assets/img/partidos/psd.png" />
             <img class="imagem imgPartido" id="psdb" src="../assets/img/partidos/psdb.png" />
             <img class="imagem imgPartido" id="psl" src="../assets/img/partidos/psl.png" />
             <img class="imagem imgPartido" id="psol" src="../assets/img/partidos/psol.png" />
+            <img class="imagem imgPartido" id="pstu" src="../assets/img/partidos/pstu.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem imgPartido" id="pstu" src="../assets/img/partidos/pstu.png" />
             <img class="imagem imgPartido" id="pt" src="../assets/img/partidos/pt.png" />
             <img class="imagem imgPartido" id="ptb" src="../assets/img/partidos/ptb.png" />
             <img class="imagem imgPartido" id="ptc" src="../assets/img/partidos/ptc.png" />
             <img class="imagem imgPartido" id="pv" src="../assets/img/partidos/pv.png" />
+            <img class="imagem imgPartido" id="rede" src="../assets/img/partidos/rede.png" />
           </div>
           <div class="linhaImg">
-            <img class="imagem imgPartido" id="rede" src="../assets/img/partidos/rede.png" />
-            <img class="imagem imgPartido" id="sd" src="../assets/img/partidos/sd.png" />
+            <img class="imagem imgPartido" id="republicanos" src="../assets/img/partidos/republicanos.png" />
+            <img class="imagem imgPartido" id="Solidariedade" src="../assets/img/partidos/solidariedade.png" />
           </div>
         </div>
       </div>
@@ -72,8 +72,8 @@
             para realizar a busca!</span>
           <table class="table table-striped" style="width: 90%;">
             <tr>
-              <td class="imgPartido" id="prb" style="width: 25%; text-align: center;">
-                <p>10 - REP
+              <td class="imgPartido" id="republicanos" style="width: 25%; text-align: center;">
+                <p>10 - REPUBLICANOS
                   <!-- Republicanos --><br />
                 </p>
               </td>
@@ -121,8 +121,8 @@
                   <!-- <br /> Rede Sustentabilidade -->
                 </p>
               </td>
-              <td class="imgPartido" id="podemos" style="width: 25%; text-align: center;">
-                <p>19 - PODE
+              <td class="imgPartido" id="pode" style="width: 25%; text-align: center;">
+                <p>19 - PODEMOS
                   <!-- <br /> Podemos -->
                 </p>
               </td>
@@ -143,8 +143,8 @@
                   <!-- <br /> Partido Liberal -->
                 </p>
               </td>
-              <td class="imgPartido" id="pps" style="width: 25%; text-align: center;">
-                <p>23 - CDN
+              <td class="imgPartido" id="cidadania" style="width: 25%; text-align: center;">
+                <p>23 - CIDADANIA
                   <!-- <br /> Cidadania -->
                 </p>
               </td>
@@ -236,8 +236,8 @@
                   <!-- <br /> Avante -->
                 </p>
               </td>
-              <td class="imgPartido" id="sd" style="width: 25%; text-align: center;">
-                <p>77 - SD
+              <td class="imgPartido" id="solidariedade" style="width: 25%; text-align: center;">
+                <p>77 - SOLIDARIEDADE
                   <!-- <br /> Solidariedade -->
                 </p>
               </td>
