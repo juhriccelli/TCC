@@ -73,11 +73,7 @@
           <table class="table table-striped" style="width: 90%;">
             <tr>
               <td class="imgPartido" id="republicanos" style="width: 25%; text-align: center;">
-<<<<<<< HEAD
-                <p>10 - REPUBLICANOS
-=======
                 <p>10 - REP
->>>>>>> f73999b04f633b11b66cd5d5d212e557eda5165b
                   <!-- Republicanos --><br />
                 </p>
               </td>
@@ -241,7 +237,7 @@
                 </p>
               </td>
               <td class="imgPartido" id="solidariedade" style="width: 25%; text-align: center;">
-                <p>77 - SOLIDARIEDADE
+                <p>77 - SD
                   <!-- <br /> Solidariedade -->
                 </p>
               </td>
