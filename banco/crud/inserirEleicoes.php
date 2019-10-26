@@ -201,21 +201,8 @@
     $tp_agremiacao = "";
 
     //SQL com o Insert pra ser inserido no banco.
-    $sql = "INSERT INTO eleicoes (ano_eleicao,
-      nr_turno, ds_eleicao, sg_uf, nm_ue,
-      nm_municipio, ds_cargo, nr_candidato,
-      nm_candidato, nm_urna_candidato,
-      ds_detalhe_situacao_cand,
-      nr_partido, sg_partido, nm_partido,
-      ds_sit_tot_turno, qt_votos_nominais)
-      VALUES ('$ano_eleicao', '$nr_turno',
-        '$ds_eleicao', '$sg_uf', '$nm_ue',
-        '$nm_municipio', '$ds_cargo', '$nr_candidato',
-        '$nm_candidato',
-        '$nm_urna_candidato',
-        '$ds_detalhe_situacao_cand', '$nr_partido', '$sg_partido',
-        '$nm_partido',
-        '$ds_sit_tot_turno', '$qt_votos_nominais')";
+    $sql = "INSERT INTO eleicoes (ano_eleicao, nr_turno, nm_candidato, qt_votos_nominais)
+      VALUES ('$ano_eleicao', '$nr_turno', '$nm_candidato', '$qt_votos_nominais')";
 
     //Caso consiga inserir o sql, imprime a query na tela. Caso contrario aparece o erro.
     if ($conexao->query($sql) === TRUE) {

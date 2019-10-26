@@ -13,8 +13,6 @@
     nome_municipio VARCHAR(1000),
     data_filiacao DATE,
     situacao_registro VARCHAR(20),
-    tipo_registro VARCHAR(20),
-    data_desfiliacao DATE,
     data_cancelamento DATE,
     motivo_cancelamento VARCHAR(1000));
     ";

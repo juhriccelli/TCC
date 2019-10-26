@@ -45,12 +45,11 @@
         //SQL com o Insert pra ser inserido no banco.
         $sql = "INSERT INTO filiados (numero_inscricao, nome_filiado,
           sigla_partido, nome_partido, uf, nome_municipio,
-          data_filiacao, situacao_registro, tipo_registro, data_desfiliacao,
+          data_filiacao, situacao_registro, 
           data_cancelamento, motivo_cancelamento)
           VALUES ('$numero_inscricao',
           '$nome_filiado', '$sigla_partido', '$nome_partido', '$uf', '$nome_municipio',
           '$data_filiacao', '$situacao_registro',
-          '$tipo_registro', '$data_desfiliacao',
           '$data_cancelamento', '$motivo_cancelamento')";
 
 
