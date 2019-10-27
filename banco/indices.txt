@@ -1,0 +1,17 @@
+CREATE INDEX `idx.fil.partido` ON filiados(sigla_partido);
+CREATE INDEX `idx.fil.estado` ON filiados(uf);
+CREATE INDEX `idx.fil.situacao` ON filiados(situacao_registro);
+
+
+CREATE INDEX `idx.cand.ano` ON candidatos(ano_eleicao);
+CREATE INDEX `idx.cand.turno` ON candidatos(nr_turno);
+CREATE INDEX `idx.cand.estado` ON candidatos(sg_uf);
+CREATE INDEX `idx.cand.partido` ON candidatos(sg_partido);
+
+
+CREATE INDEX `idx.elei.ano` ON eleicoes(ano_eleicao);
+CREATE INDEX `idx.elei.turno` ON eleicoes(nr_turno);
+
+
+
+SHOW INDEX FROM id9315071_tcc.filiados;
